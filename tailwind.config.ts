@@ -16,7 +16,8 @@ const config: Config = {
       fontFamily: {
         oxygen: "Oxygen Mono, monospace",
         ubuntu: "Ubuntu Mono, monospace",
-        jetbrain: "JetBrains Mono, monospace"
+        jetbrain: "JetBrains Mono, monospace",
+        fira: "Fira Mono, monospace"
       }
     },
   },

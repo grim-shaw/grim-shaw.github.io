@@ -1,0 +1,67 @@
+import Image from "next/image"
+import React from "react"
+
+export default function SingleBlog() {
+	return (
+		<div className="m-auto my-[1em] bg-[#18181B] cursor-pointer border-[1px] rounded-[0.5rem] border-[#27272A] py-[1em] px-[1.5em] w-[70%] h-[15em] flex flex-row justify-center align-middle">
+			<div className="relative h-[12em] w-[40em] m-auto flex flex-col justify-center align-middle rounded-[0.5em] mr-[1em] overflow-clip">
+				<Image
+					src={"/sample-blog-thumbnail.webp"}
+					alt={"blog thumbnail"}
+					layout="fill"
+					objectFit="cover"
+					className="absolute inset-0 rounded-[0.5em] transition-transform transition-duration-5000 transform hover:scale-125"
+				/>
+			</div>
+			<div className="font-oxygen font-semibold py-[1em]">
+				<div className="m-auto">
+					<p className="break-words text-wrap text-[#F97316] hover:underline underline-offset-2">
+						How to Create a Custom 404 Error Page in Nextjs 13
+					</p>
+					<div
+						className="h-[6em] w-[30em]"
+						style={{
+							whiteSpace: "nowrap",
+							overflow: "hidden",
+							textOverflow: "ellipsis"
+						}}
+					>
+						<p className="text-[#A1A1AA] text-[0.85rem] font-normal text-wrap">
+							Learn how to set up and trigger content updates in
+							your Sanity Headless CMS site built in Nextjs using
+							on-demand revalidation and GROQ-powered webhooks for
+							delivering fast and non-cached content updates
+						</p>
+					</div>
+					<div className="flex flex-row text-white text-[0.8rem] justify-items-start align-middle mt-[1em] font-normal">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							className="inline-block fill-white h-6 scale-75 w-[1.375rem] my-auto"
+							aria-hidden="true"
+						>
+							<path d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"></path>
+							<path d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"></path>
+						</svg>
+						<p className="my-auto">
+							&nbsp;April 7, 2024&nbsp;&nbsp;
+							<span className="scale-110">|</span>&nbsp;&nbsp;
+						</p>
+						<svg
+							stroke="white"
+							fill="white"
+							stroke-width="0"
+							viewBox="0 0 24 24"
+							height="1.25em"
+							width="1.25em"
+							xmlns="http://www.w3.org/2000/svg"
+							className="scale-110 my-auto"
+						>
+							<path d="M12.25 2c-5.514 0-10 4.486-10 10s4.486 10 10 10 10-4.486 10-10-4.486-10-10-10zM18 13h-6.75V6h2v5H18v2z"></path>
+						</svg>
+						<p className="my-auto ml-[12px]">4 min</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	)
+}

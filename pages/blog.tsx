@@ -1,6 +1,5 @@
 import React from "react"
 import { motion } from "framer-motion"
-import Image from "next/image"
 import Blogs from "@/components/blogs"
 
 export default function Blog() {
@@ -40,7 +39,7 @@ export default function Blog() {
 				</div>
 			</section>
 			<section className="flex flex-col justify-center align-middle m-auto w-[100%] py-[3em]">
-				<div className="m-auto flex flex-row text-left w-[60%]">
+				<div className="m-auto flex flex-row text-left w-[70%] mb-[1em]">
 					<svg
 						stroke="white"
 						fill="white"

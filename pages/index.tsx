@@ -1,7 +1,5 @@
-import Navbar from "@/components/navbar"
 import Intro from "@/components/intro"
 import Experience from "@/components/experience"
-import Footer from "@/components/footer"
 import { motion } from "framer-motion"
 
 export default function Home() {
@@ -13,10 +11,8 @@ export default function Home() {
 				duration: 0.75
 			}}
 		>
-			<Navbar />
 			<Intro />
 			<Experience />
-			<Footer />
 		</motion.div>
 	)
 }

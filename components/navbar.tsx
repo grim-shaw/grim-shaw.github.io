@@ -8,7 +8,7 @@ import React from "react"
 export default function Navbar() {
 	return (
 		<div
-			className={`flex flex-row m-0 mt-[1em] justify-center h-[2.5em] align-middle font-jetbrain text-[0.9rem]`}
+			className={`flex flex-row m-0 pb-[0.5em] pt-[1em] mb-[1em] backdrop-filter backdrop-blur-[16px] backdrop-saturate-150 fixed justify-center h-[4em] align-middle font-jetbrain text-[0.9rem] w-[100%]`}
 		>
 			<div className="border-[1px] text-[#bbb] border-[#413f3f] hover:border-[#c0bbbb] cursor-pointer rounded-[10px] mx-[1em] flex flex-col justify-center align-middle">
 				<Link

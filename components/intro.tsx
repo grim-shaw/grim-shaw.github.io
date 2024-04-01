@@ -4,9 +4,8 @@ import React from "react"
 export default function Intro() {
 	return (
 		<div className="flex flex-col justify-center align-middle m-auto">
-			<div className="m-auto mt-[4em] text-center">
+			<div className="m-auto mt-[6em] text-center">
 				<Image
-					// src={"/ma-pic4.jpg"}
 					src={"/takuya.webp"}
 					alt="profile"
 					width={150}

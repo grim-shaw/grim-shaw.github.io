@@ -26,6 +26,7 @@ function TabPanel(props: TabPanelProps) {
 			hidden={value !== index}
 			id={`vertical-tabpanel-${index}`}
 			aria-labelledby={`vertical-tab-${index}`}
+			className="font-oxygen text-[0.85rem] w-[100%]"
 			{...other}
 		>
 			{value === index && (
@@ -56,14 +57,14 @@ export default function Experience() {
 			<p className="font-ubuntu text-[#2bbc8a] m-auto mt-[1em] text-[1.25rem]">
 				Experience
 			</p>
-			<div className="flex flex-col justify-center align-middle min-w-[35em] m-auto mt-[1em]">
+			<div className="flex flex-col justify-center align-middle min-w-[38em] m-auto mt-[1em]">
 				<ThemeProvider theme={theme}>
 					<Box
 						sx={{
 							flexGrow: 1,
 							bgcolor: "#202023",
 							display: "flex",
-							minHeight: "24em",
+							minHeight: "22em",
 							color: "white"
 						}}
 					>
@@ -101,7 +102,7 @@ export default function Experience() {
 							/>
 						</Tabs>
 						<TabPanel value={value} index={0}>
-							<p className="w-[30em] break-words text-wrap text-left">
+							<p className="w-[38em] break-words text-wrap text-left">
 								Worked as Full-Stack Intern on a cutting-edge
 								web development tool called WebbsAI that
 								combines drag-and-drop functionality with
@@ -109,7 +110,7 @@ export default function Experience() {
 								creation process.
 							</p>
 							<br />
-							<div className="w-[30em] break-words text-wrap text-left">
+							<div className="w-[38em] break-words text-wrap text-left">
 								<li>
 									<span>
 										Implemented secure and efficient API
@@ -148,7 +149,7 @@ export default function Experience() {
 							</div>
 						</TabPanel>
 						<TabPanel value={value} index={1}>
-							<p className="w-[30em] text-left">
+							<p className="w-[38em] text-left">
 								Starting in June, 2024
 							</p>
 						</TabPanel>

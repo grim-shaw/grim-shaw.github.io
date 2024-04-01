@@ -1,8 +1,8 @@
 import * as React from "react"
 import Tabs from "@mui/material/Tabs"
 import Tab from "@mui/material/Tab"
-import Typography from "@mui/material/Typography"
 import { createTheme, ThemeProvider } from "@mui/material/styles"
+import Fade from "@mui/material/Fade"
 import Box from "@mui/material/Box"
 
 interface TabPanelProps {
@@ -26,14 +26,12 @@ function TabPanel(props: TabPanelProps) {
 			hidden={value !== index}
 			id={`vertical-tabpanel-${index}`}
 			aria-labelledby={`vertical-tab-${index}`}
-			className="font-ubuntu color-[]"
 			{...other}
 		>
 			{value === index && (
-				<Box sx={{ p: 3 }}>
-					{/* <Typography>{children}</Typography> */}
-					{children}
-				</Box>
+				<Fade in={value === index} timeout={1500}>
+					<Box sx={{ p: 3 }}>{children}</Box>
+				</Fade>
 			)}
 		</div>
 	)
@@ -54,7 +52,7 @@ export default function Experience() {
 	}
 
 	return (
-		<div className="m-auto my-[2em] text-center bg-[#202023] flex flex-col justify-center align-middle">
+		<div className="m-auto my-[2em] text-center bg-[#202023] flex flex-col justify-center align-middle w-[80%]">
 			<p className="font-ubuntu text-[#2bbc8a] m-auto mt-[1em] text-[1.25rem]">
 				Experience
 			</p>

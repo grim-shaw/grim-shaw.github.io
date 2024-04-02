@@ -6,7 +6,7 @@ export default function Intro() {
 		<div className="flex flex-col justify-center align-middle m-auto">
 			<div className="m-auto mt-[6em] text-center">
 				<Image
-					src={"/takuya.webp"}
+					src={"/me1.jpg"}
 					alt="profile"
 					width={150}
 					height={150}

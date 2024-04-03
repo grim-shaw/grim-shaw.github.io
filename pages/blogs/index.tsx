@@ -1,8 +1,24 @@
 import React from "react"
 import { motion } from "framer-motion"
-import Blogs from "@/components/blogs"
+import BlogsList from "@/components/blogsList"
+import { createClient } from "contentful"
 
-export default function Blog() {
+export async function getStaticProps() {
+	const client = createClient({
+		space: process.env.CONTENTFUL_SPACE_ID as string,
+		accessToken: process.env.CONTENTFUL_ACCESS_KEY as string
+	})
+
+	const res = await client.getEntries({ content_type: "tech-blog" })
+
+	return {
+		props: {
+			blogs: res.items
+		}
+	}
+}
+
+export default function Blog({ blogs }: any) {
 	return (
 		<motion.div
 			initial={{ y: 25, opacity: 0 }}
@@ -57,7 +73,7 @@ export default function Blog() {
 						Explore All
 					</p>
 				</div>
-				<Blogs />
+				<BlogsList blogs={blogs} />
 			</section>
 		</motion.div>
 	)

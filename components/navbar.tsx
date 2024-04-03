@@ -46,7 +46,7 @@ export default function Navbar() {
 			</div>
 			<div className="border-[1px] text-[#bbb] border-[#413f3f] rounded-[10px] hover:border-[#c0bbbb] cursor-pointer mx-[1em] flex flex-col justify-center align-middle">
 				<Link
-					href={"/blog"}
+					href={"/blogs"}
 					className="flex flex-row justify-center align-middle m-0 my-auto mx-auto px-[1em]"
 				>
 					<Image

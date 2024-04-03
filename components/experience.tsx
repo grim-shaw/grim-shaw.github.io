@@ -13,7 +13,7 @@ interface TabPanelProps {
 
 const theme = createTheme({
 	palette: {
-		primary: { main: "#2bbc8a" }
+		primary: { main: "#F97316" }
 	}
 })
 
@@ -54,7 +54,7 @@ export default function Experience() {
 
 	return (
 		<div className="m-auto my-[2em] text-center bg-[#202023] flex flex-col justify-center align-middle w-[80%]">
-			<p className="font-ubuntu text-[#2bbc8a] m-auto mt-[1em] text-[1.25rem]">
+			<p className="font-ubuntu text-primary m-auto mt-[1em] text-[1.3rem]">
 				Experience
 			</p>
 			<div className="flex flex-col justify-center align-middle min-w-[38em] m-auto mt-[1em]">
@@ -75,12 +75,12 @@ export default function Experience() {
 							aria-label="Work Experiences"
 							sx={{
 								borderRight: 1,
-								borderColor: "#2bbc8a"
+								borderColor: "#F97316"
 							}}
 							TabIndicatorProps={{
 								style: {
-									backgroundColor: "#2bbc8a",
-									color: "#2bbc8a"
+									backgroundColor: "#F97316",
+									color: "#F97316"
 								}
 							}}
 						>

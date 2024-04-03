@@ -13,6 +13,13 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      textColor: {
+        "primary": "#F97316",
+        "secondary": "#2bbc8a"
+      },
+      backgroundColor: {
+        "primary": "#F97316"
+      },
       fontFamily: {
         oxygen: "Oxygen Mono, monospace",
         ubuntu: "Ubuntu Mono, monospace",

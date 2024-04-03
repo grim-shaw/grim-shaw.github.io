@@ -1,8 +1,24 @@
 import React from "react"
 import { createClient } from "contentful"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { BLOCKS } from "@contentful/rich-text-types"
+import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types"
 import { CopyBlock, obsidian } from "react-code-blocks"
+import Link from "next/link"
+
+const Month = {
+	"01": "January",
+	"02": "February",
+	"03": "March",
+	"04": "April",
+	"05": "May",
+	"06": "June",
+	"07": "July",
+	"08": "August",
+	"09": "September",
+	"10": "October",
+	"11": "November",
+	"12": "December"
+} as any
 
 const client = createClient({
 	space: process.env.CONTENTFUL_SPACE_ID as string,
@@ -37,21 +53,6 @@ export async function getStaticProps({ params }: any) {
 	}
 }
 
-const Month = {
-	"01": "January",
-	"02": "February",
-	"03": "March",
-	"04": "April",
-	"05": "May",
-	"06": "June",
-	"07": "July",
-	"08": "August",
-	"09": "September",
-	"10": "October",
-	"11": "November",
-	"12": "December"
-} as any
-
 function getFormatedTime(time: string) {
 	const timeParts = time.split("-")
 	return `${timeParts[2]} ${Month[timeParts[1]]}, ${timeParts[0]}`
@@ -62,12 +63,43 @@ const find = (array: any, condition: any) => {
 }
 
 const customMarkdownOptions = (content: any) => ({
+	renderMark: {
+		[MARKS.CODE]: (text: string) => (
+			<span className="bg-[#282c34] text-white border-[#6e6e8966] border-[1px] px-[0.3em] py-[0.1em] rounded-[0.25em]">
+				{text}
+			</span>
+		)
+	},
 	renderNode: {
 		[BLOCKS.HEADING_4]: (node: any, children: any) => {
 			return (
 				<h4 className="text-primary text-[1.1rem] mt-[1rem] font-ubuntu font-semibold">
 					{children}
 				</h4>
+			)
+		},
+		[INLINES.HYPERLINK]: (node: any, children: any) => {
+			return (
+				<Link
+					href={node.data.uri}
+					className="text-secondary cursor-pointer hover:underline"
+				>
+					{children}
+					<svg
+						stroke="#2bbc8a"
+						fill="#2bbc8a"
+						stroke-width="0"
+						viewBox="0 0 24 24"
+						className="inline ml-1"
+						aria-hidden="true"
+						height="1.25em"
+						width="1.25em"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"></path>
+						<path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"></path>
+					</svg>
+				</Link>
 			)
 		},
 		[BLOCKS.PARAGRAPH]: (node: any, children: any) => {
@@ -87,11 +119,34 @@ const customMarkdownOptions = (content: any) => ({
 					</div>
 				)
 			}
+			// else if (
+			// 	find(node.content, (content: any) => {
+			// 		return (
+			// 			content.marks &&
+			// 			content.marks.length > 0 &&
+			// 			content.marks[0].type === "code"
+			// 		)
+			// 	})
+			// ) {
+			// 	console.log(node, "bur")
+			// 	return (
+			// 		<span className="bg-[#27272b66] text-white border-red-900 border-2">
+			// 			{children}
+			// 		</span>
+			// 	)
+			// }
 
 			return <p>{children}</p>
 		}
 	}
 })
+
+function renderBlogContent(blogContent: any) {
+	return documentToReactComponents(
+		blogContent,
+		customMarkdownOptions(blogContent)
+	)
+}
 
 export default function Blog({ blog }: any) {
 	const { title, readingTime, blogContent, publishedTime, tags } = blog.fields
@@ -109,7 +164,7 @@ export default function Blog({ blog }: any) {
 						<path d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"></path>
 					</svg>
 					<p className="my-auto ml-[0.25em]">
-						&nbsp;{getFormatedTime(publishedTime)}
+						{getFormatedTime(publishedTime)}
 					</p>
 					<svg
 						stroke="#a1a1aa"
@@ -128,12 +183,9 @@ export default function Blog({ blog }: any) {
 				<p className="text-primary font-ubuntu text-[1.75em] mb-[1em]">
 					{title}
 				</p>
-				<p className="text-white font-fira font-light text-[0.85em] opacity-80">
-					{documentToReactComponents(
-						blogContent,
-						customMarkdownOptions(blogContent)
-					)}
-				</p>
+				<div className="text-white font-fira font-light text-[0.85em] opacity-80">
+					{renderBlogContent(blogContent)}
+				</div>
 			</div>
 			<div className="flex flex-start flex-col border-l-[1px] border-t-[1px] border-[#413f3f] text-white w-[20em] text-[0.8rem] mt-[5em] pt-[2em] mr-[3em] pl-[2em] pr-[1em]">
 				<div className="w-[100%] font-fira text-lg mt-[0.5em]">

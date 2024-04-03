@@ -18,7 +18,8 @@ const config: Config = {
         "secondary": "#2bbc8a"
       },
       backgroundColor: {
-        "primary": "#F97316"
+        "primary": "#F97316",
+        "secondary": "#2bbc8a"
       },
       fontFamily: {
         oxygen: "Oxygen Mono, monospace",

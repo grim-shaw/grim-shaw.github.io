@@ -64,7 +64,7 @@ const find = (array: any, condition: any) => {
 
 const customMarkdownOptions = (content: any) => ({
 	renderMark: {
-		[MARKS.CODE]: (text: string) => (
+		[MARKS.CODE]: (text: any) => (
 			<span className="bg-[#282c34] text-white border-[#6e6e8966] border-[1px] px-[0.3em] py-[0.1em] rounded-[0.25em]">
 				{text}
 			</span>
@@ -119,22 +119,6 @@ const customMarkdownOptions = (content: any) => ({
 					</div>
 				)
 			}
-			// else if (
-			// 	find(node.content, (content: any) => {
-			// 		return (
-			// 			content.marks &&
-			// 			content.marks.length > 0 &&
-			// 			content.marks[0].type === "code"
-			// 		)
-			// 	})
-			// ) {
-			// 	console.log(node, "bur")
-			// 	return (
-			// 		<span className="bg-[#27272b66] text-white border-red-900 border-2">
-			// 			{children}
-			// 		</span>
-			// 	)
-			// }
 
 			return <p>{children}</p>
 		}

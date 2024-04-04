@@ -44,7 +44,7 @@ export default function Navbar() {
 					<p className="m-0 mx-auto my-auto ml-1">Projects</p>
 				</Link>
 			</div>
-			<div className="border-[1px] text-[#bbb] border-[#413f3f] rounded-[10px] hover:border-[#c0bbbb] cursor-pointer mx-[1em] flex flex-col justify-center align-middle">
+			<div className="border-[1px] text-[#bbb] border-[#413f3f] rounded-[10px] transition transition-duration-2000 transform hover:border-[#c0bbbb] cursor-pointer mx-[1em] flex flex-col justify-center align-middle">
 				<Link
 					href={"/blogs"}
 					className="flex flex-row justify-center align-middle m-0 my-auto mx-auto px-[1em]"

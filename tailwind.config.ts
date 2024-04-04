@@ -26,6 +26,9 @@ const config: Config = {
         ubuntu: "Ubuntu Mono, monospace",
         jetbrain: "JetBrains Mono, monospace",
         fira: "Fira Mono, monospace"
+      },
+      transitionDuration: {
+        "700": "700ms"
       }
     },
   },

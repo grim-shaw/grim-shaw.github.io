@@ -15,7 +15,7 @@ export default function Intro() {
 				<p className="font-ubuntu text-white m-auto mt-[1em] text-[1.25rem]">
 					Usama Qureshi
 				</p>
-				<p className="font-ubuntu text-white m-auto p-[0.75rem] mt-[0.75rem] rounded-[0.5rem] text-center text-[1rem] bg-[#ffffff14]">
+				<p className="font-ubuntu text-white m-auto p-[0.75rem] mt-[0.75rem] rounded-[0.5rem] text-center text-[1rem] bg-[#ffffff14] shadow-md shadow-black">
 					Full Stack / Machine Learning Engineer
 				</p>
 			</div>

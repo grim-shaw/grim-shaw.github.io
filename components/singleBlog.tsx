@@ -35,14 +35,14 @@ export default function SingleBlog({ blog }: any) {
 	} = blog.fields
 
 	return (
-		<div className="m-auto my-[1em] bg-[#18181B] cursor-pointer border-[1px] rounded-[0.5rem] border-[#27272A] py-[1em] px-[1.5em] w-[70%] h-[15em] flex flex-row justify-center align-middle">
+		<div className="m-auto my-[1em] bg-[#18181B] shadow-md shadow-black hover:shadow-lg hover:shadow-black transition-shadow duration-500 ease-out cursor-pointer border-[1px] rounded-[0.5rem] border-[#27272A] py-[1em] px-[1.5em] w-[70%] h-[15em] flex flex-row justify-center align-middle">
 			<div className="relative h-[12em] w-[40em] m-auto flex flex-col justify-center align-middle rounded-[0.5em] mr-[1em] overflow-clip">
 				<Image
 					src={`https:${thumbnail.fields.file.url}`}
 					alt={thumbnail.fields.title}
 					layout="fill"
 					objectFit="cover"
-					className="absolute inset-0 rounded-[0.5em] transition-transform transition-duration-5000 transform hover:scale-125"
+					className="absolute inset-0 rounded-[0.5em] transition-transform duration-500 transform hover:scale-125 ease-out"
 				/>
 			</div>
 			<div className="font-oxygen font-semibold py-[1em]">

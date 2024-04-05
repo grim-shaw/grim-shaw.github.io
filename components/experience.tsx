@@ -54,7 +54,7 @@ export default function Experience() {
 
 	return (
 		<div className="m-auto my-[2em] text-center bg-[#202023] flex flex-col justify-center align-middle w-[80%]">
-			<p className="font-ubuntu text-primary m-auto mt-[1em] text-[1.3rem]">
+			<p className="font-ubuntu text-primary m-auto mt-[1em] text-[1.3rem] underline underline-offset-4">
 				Education & Experience
 			</p>
 			<div className="flex flex-col justify-center align-middle min-w-[38em] m-auto mt-[1em]">
@@ -84,8 +84,16 @@ export default function Experience() {
 								}
 							}}
 						>
-							<Tab
+							{/* <Tab
 								label="Software Engineer"
+								{...a11yProps(0)}
+								sx={{
+									color: "white",
+									fontFamily: "Ubuntu Mono"
+								}}
+							/> */}
+							<Tab
+								label="Software Engineering Intern"
 								{...a11yProps(0)}
 								sx={{
 									color: "white",
@@ -93,23 +101,15 @@ export default function Experience() {
 								}}
 							/>
 							<Tab
-								label="Software Engineering Intern"
+								label="Computer Science Undergrad"
 								{...a11yProps(1)}
 								sx={{
 									color: "white",
 									fontFamily: "Ubuntu Mono"
 								}}
 							/>
-							<Tab
-								label="Computer Science Undergrad"
-								{...a11yProps(2)}
-								sx={{
-									color: "white",
-									fontFamily: "Ubuntu Mono"
-								}}
-							/>
 						</Tabs>
-						<TabPanel value={value} index={0}>
+						{/* <TabPanel value={value} index={0}>
 							<p className="w-[38em] text-left mb-[1em] text-primary font-semibold">
 								Software Engineer @ Arbisoft -{" "}
 								<span className="font-ubuntu text-[1em] text-secondary px-[0.5em] py-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
@@ -117,22 +117,22 @@ export default function Experience() {
 								</span>
 							</p>
 							<p className="w-[38em] text-left"></p>
-						</TabPanel>
-						<TabPanel value={value} index={1}>
-							<p className="w-[38em] text-left mb-[1em] text-primary font-semibold">
+						</TabPanel> */}
+						<TabPanel value={value} index={0}>
+							<p className="w-[41em] text-left mb-[1em] text-primary font-semibold">
 								Full Stack Intern @ ThinkSoft -{" "}
 								<span className="font-ubuntu text-[1em] text-secondary px-[0.5em] py-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
 									March, 2023 - July, 2023
 								</span>
 							</p>
-							<p className="w-[38em] break-words text-wrap text-left">
+							<p className="w-[41em] break-words text-wrap text-left">
 								Worked on a cutting-edge web development tool
 								called WebbsAI that combines drag-and-drop
 								functionality with Generative AI assistance to
 								simplify website creation process.
 							</p>
 							<br />
-							<div className="w-[38em] break-words text-wrap text-left">
+							<div className="w-[41em] break-words text-wrap text-left">
 								<li>
 									<span>
 										Implemented secure and efficient API
@@ -188,21 +188,21 @@ export default function Experience() {
 											Mongoose
 										</span>
 										<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
-											Github
+											Git/Github
 										</span>
 									</p>
 								</p>
 							</div>
 						</TabPanel>
-						<TabPanel value={value} index={2}>
-							<p className="w-[38em] text-left mb-[1em] leading-6 text-primary font-semibold">
+						<TabPanel value={value} index={1}>
+							<p className="w-[41em] text-left mb-[1em] leading-6 text-primary font-semibold">
 								Bachelor in Computer Science @ National
 								University of Science & Technology (NUST) -{" "}
 								<span className="font-ubuntu text-[1em] text-secondary px-[0.5em] py-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
 									June, 2020 - June, 2024
 								</span>
 							</p>
-							<p className="w-[38em] text-left">
+							<p className="w-[41em] text-left">
 								Studied computer science from School of
 								Electrical Engineering and Computer Science
 								(SEECS) at NUST. <br />

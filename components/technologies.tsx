@@ -4,7 +4,7 @@ import React from "react"
 export default function Technologies() {
 	return (
 		<div className="w-[50%] flex flex-col justify-start m-auto my-[2em]">
-			<div className="font-ubuntu text-primary m-auto my-[1em] text-[1.3rem]">
+			<div className="font-ubuntu text-primary m-auto my-[1em] text-[1.3rem] underline underline-offset-4">
 				Tools & Technologies
 			</div>
 			<div className="flex flex-row justify-start pl-[3em] pt-[0.5em]">

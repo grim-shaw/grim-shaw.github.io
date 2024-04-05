@@ -20,7 +20,7 @@ export default function Intro() {
 				</p>
 			</div>
 			<div className="m-auto mt-[2em] text-center">
-				<p className="font-ubuntu text-primary m-auto mt-[1em] text-[1.3rem]">
+				<p className="font-ubuntu text-primary m-auto mt-[1em] text-[1.3rem] underline underline-offset-4">
 					Bio
 				</p>
 				<p className="font-oxygen text-white m-auto mt-[1em] text-[0.85rem] w-[40em] text-justify break-words">

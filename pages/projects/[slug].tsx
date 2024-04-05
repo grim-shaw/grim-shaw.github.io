@@ -1,7 +1,6 @@
 import React from "react"
 import fs from "fs"
 import path from "path"
-import { motion } from "framer-motion"
 
 import ProjectDetails from "@/components/projectDetails"
 

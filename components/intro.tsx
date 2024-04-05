@@ -10,7 +10,7 @@ export default function Intro() {
 					alt="profile"
 					width={150}
 					height={150}
-					className="rounded-[50%] m-auto"
+					className="rounded-[50%] m-auto shadow-md shadow-black"
 				/>
 				<p className="font-ubuntu text-white m-auto mt-[1em] text-[1.25rem]">
 					Usama Qureshi

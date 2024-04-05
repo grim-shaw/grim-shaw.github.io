@@ -3,6 +3,12 @@ import { motion } from "framer-motion"
 import BlogsList from "@/components/blogsList"
 import { createClient } from "contentful"
 
+const variants = {
+	hidden: { opacity: 0, x: 0, y: 20 },
+	enter: { opacity: 1, x: 0, y: 0 },
+	exit: { opacity: 0, x: -0, y: 20 }
+}
+
 export async function getStaticProps() {
 	const client = createClient({
 		space: process.env.CONTENTFUL_SPACE_ID as string,
@@ -21,11 +27,11 @@ export async function getStaticProps() {
 export default function Blog({ blogs }: any) {
 	return (
 		<motion.div
-			initial={{ y: 25, opacity: 0 }}
-			animate={{ y: 0, opacity: 1 }}
-			transition={{
-				duration: 0.75
-			}}
+			initial={"hidden"}
+			animate={"enter"}
+			exit={"exit"}
+			variants={variants}
+			transition={{ duration: 0.4, type: "easeInOut" }}
 		>
 			<section className="flex flex-col justify-center align-middle m-auto w-[100%] h-[24em] pt-[4em]">
 				<div className="m-auto text-center w-[100%] h-[20em] relative">

@@ -1,12 +1,26 @@
 import Image from "next/image"
 import Link from "next/link"
 import React from "react"
+import { motion } from "framer-motion"
+
+const variants = {
+	hidden: { opacity: 0, x: 0, y: 20 },
+	enter: { opacity: 1, x: 0, y: 0 },
+	exit: { opacity: 0, x: -0, y: 20 }
+}
 
 export default function ProjectDetails({ project }: any) {
 	const { title, projectUrl, githubUrl, description, year, images, stack } =
 		project
 	return (
-		<div className="text-primary text-center flex flex-col justify-center align-middle m-auto w-[50%] mx-auto min-h-[24em] pt-[8em]">
+		<motion.div
+			initial={"hidden"}
+			animate={"enter"}
+			exit={"exit"}
+			variants={variants}
+			transition={{ duration: 0.4, type: "easeInOut" }}
+			className="text-primary text-center flex flex-col justify-center align-middle m-auto w-[50%] mx-auto min-h-[24em] pt-[8em]"
+		>
 			<div className="text-left font-ubuntu font-semibold text-[1.2rem] px-[2.8em] flex flex-row">
 				<span className="underline underline-offset-4">Projects</span>
 				&nbsp;{">"}&nbsp;{title}
@@ -77,7 +91,7 @@ export default function ProjectDetails({ project }: any) {
 								<Image
 									src={image}
 									layout={"fill"}
-									objectFit={"cover"}
+									style={{ objectFit: "cover" }}
 									alt={"project images"}
 								/>
 							</div>
@@ -85,6 +99,6 @@ export default function ProjectDetails({ project }: any) {
 					})}
 				</div>
 			) : null}
-		</div>
+		</motion.div>
 	)
 }

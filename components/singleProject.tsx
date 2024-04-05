@@ -12,7 +12,7 @@ export default function SingleProject(props: any) {
 					src={featuredImage}
 					alt={"project feature image"}
 					layout={"fill"}
-					objectFit={"cover"}
+					style={{ objectFit: "cover" }}
 					className="transition-transform duration-500 transform ease-out hover:scale-125"
 				/>
 			</div>

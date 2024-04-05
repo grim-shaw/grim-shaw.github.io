@@ -41,7 +41,7 @@ export default function SingleBlog({ blog }: any) {
 					src={`https:${thumbnail.fields.file.url}`}
 					alt={thumbnail.fields.title}
 					layout="fill"
-					objectFit="cover"
+					style={{ objectFit: "cover" }}
 					className="absolute inset-0 rounded-[0.5em] transition-transform duration-500 transform hover:scale-125 ease-out"
 				/>
 			</div>

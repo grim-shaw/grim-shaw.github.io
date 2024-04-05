@@ -5,6 +5,12 @@ import { motion } from "framer-motion"
 
 import Catalogue from "@/components/catalogue"
 
+const variants = {
+	hidden: { opacity: 0, x: 0, y: 20 },
+	enter: { opacity: 1, x: 0, y: 0 },
+	exit: { opacity: 0, x: -0, y: 20 }
+}
+
 export async function getStaticProps() {
 	let fileData = []
 	const filePath = path.join(process.cwd(), "data", "projects.json")
@@ -20,11 +26,11 @@ export async function getStaticProps() {
 export default function Projects({ projects }: any) {
 	return (
 		<motion.section
-			initial={{ y: 25, opacity: 0 }}
-			animate={{ y: 0, opacity: 1 }}
-			transition={{
-				duration: 0.75
-			}}
+			initial={"hidden"}
+			animate={"enter"}
+			exit={"exit"}
+			variants={variants}
+			transition={{ duration: 0.4, type: "easeInOut" }}
 		>
 			<div className="flex flex-col justify-center align-middle m-auto">
 				<div className="m-auto text-center mt-[7em]">

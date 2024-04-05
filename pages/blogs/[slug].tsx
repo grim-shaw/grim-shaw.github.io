@@ -4,6 +4,13 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types"
 import { CopyBlock, obsidian } from "react-code-blocks"
 import Link from "next/link"
+import { motion } from "framer-motion"
+
+const variants = {
+	hidden: { opacity: 0, x: 0, y: 20 },
+	enter: { opacity: 1, x: 0, y: 0 },
+	exit: { opacity: 0, x: -0, y: 20 }
+}
 
 const Month = {
 	"01": "January",
@@ -88,7 +95,7 @@ const customMarkdownOptions = (content: any) => ({
 					<svg
 						stroke="#2bbc8a"
 						fill="#2bbc8a"
-						stroke-width="0"
+						strokeWidth="0"
 						viewBox="0 0 24 24"
 						className="inline ml-1"
 						aria-hidden="true"
@@ -136,7 +143,14 @@ export default function Blog({ blog }: any) {
 	const { title, readingTime, blogContent, publishedTime, tags } = blog.fields
 
 	return (
-		<section className="flex flex-row justify-center align-middle m-auto w-[100%] min-h-[20em] pt-[2em]">
+		<motion.section
+			initial={"hidden"}
+			animate={"enter"}
+			exit={"exit"}
+			variants={variants}
+			transition={{ duration: 0.4, type: "easeInOut" }}
+			className="flex flex-row justify-center align-middle m-auto w-[100%] min-h-[20em] pt-[2em]"
+		>
 			<div className="w-[80%] mx-auto border-t-[1px] flex flex-col border-[#413f3f] mt-[4em] ml-[4em] pt-[2em] pr-[1em]">
 				<div className="flex flex-row text-[#a1a1aa] text-[1rem] justify-items-start align-middle mt-[0.5em] mb-[1em] font-normal">
 					<svg
@@ -153,7 +167,7 @@ export default function Blog({ blog }: any) {
 					<svg
 						stroke="#a1a1aa"
 						fill="#a1a1aa"
-						stroke-width="0"
+						strokeWidth="0"
 						viewBox="0 0 24 24"
 						height="1.2em"
 						width="1.2em"
@@ -186,6 +200,6 @@ export default function Blog({ blog }: any) {
 					))}
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	)
 }

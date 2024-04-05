@@ -134,7 +134,7 @@ function renderBlogContent(blogContent: any) {
 
 export default function Blog({ blog }: any) {
 	const { title, readingTime, blogContent, publishedTime, tags } = blog.fields
-	console.log(blog)
+
 	return (
 		<section className="flex flex-row justify-center align-middle m-auto w-[100%] min-h-[20em] pt-[2em]">
 			<div className="w-[80%] mx-auto border-t-[1px] flex flex-col border-[#413f3f] mt-[4em] ml-[4em] pt-[2em] pr-[1em]">

@@ -1,0 +1,12 @@
+[{
+    "title": "Search Engine",
+    "featuredText": "It is a search engine built on top of json files as corpus of text.",
+    "projectUrl": "",
+    "description": "'Talaash' is a Python-based search engine designed to emulate the functionality of Google, following principles outlined in Google research paper. Utilizing JSON files as its dataset, the engine employs a comprehensive indexing process. This involves parsing JSON files, removing stopwords, and stemming words using the Snowball Stemmer. The resulting forward index is partitioned into forward barrels, while a sorter reorganizes them into inverted index barrels. Concurrently, metadata about indexed documents is stored in a file named 'DocumentIndex,' and word metadata is stored in a 'lexicon' file. During searches, user-entered queries undergo similar preprocessing, with stopwords removed and words stemmed. The engine then searches the lexicon to locate relevant documents in the inverted index, retrieving hitlists of matching documents. These documents are ranked based on relevance, considering factors like word position and frequency within documents. Multi-word queries also undergo proximity analysis to further refine relevance. Finally, documents are sorted by their Information Retrieval (IR) Score, which combines various relevance metrics, and presented as clickable links to users. The project requires specific directory structures and includes a sample dataset in the 'data' folder for testing purposes.",
+    "githubUrl": "https://github.com/Grimmer107/Search-Engine",
+    "year": "2021",
+    "featuredImage": "/search-engine.png",
+    "images": ["/search-engine.png"],
+    "video": "",
+    "stack": ["Python", "Nltk", "Tkinter"]
+}]

@@ -5,8 +5,8 @@ import { createClient } from "contentful"
 
 export async function getStaticProps() {
 	const client = createClient({
-		space: "40owv3zaeflf",
-		accessToken: "BNVYh2iX4gOYpByH8zqNItwaXzGNZCGIc--4lRUkwWw"
+		space: process.env.CONTENTFUL_SPACE_ID as string,
+		accessToken: process.env.CONTENTFUL_ACCESS_KEY as string
 	})
 
 	const res = await client.getEntries({ content_type: "tech-blog" })

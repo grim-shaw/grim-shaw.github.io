@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import React from "react"
+import Head from "next/head"
 import { motion } from "framer-motion"
 
 const variants = {
@@ -21,6 +22,9 @@ export default function ProjectDetails({ project }: any) {
 			transition={{ duration: 0.4, type: "easeInOut" }}
 			className="text-primary text-center flex flex-col justify-center align-middle m-auto w-[50%] mx-auto min-h-[24em] pt-[8em]"
 		>
+			<Head>
+				<title>Projects | {title}</title>
+			</Head>
 			<div className="text-left font-ubuntu font-semibold text-[1.2rem] px-[2.8em] flex flex-row">
 				<span className="underline underline-offset-4">Projects</span>
 				&nbsp;{">"}&nbsp;{title}

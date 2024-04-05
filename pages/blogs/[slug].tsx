@@ -4,6 +4,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types"
 import { CopyBlock, obsidian } from "react-code-blocks"
 import Link from "next/link"
+import Head from "next/head"
 import { motion } from "framer-motion"
 
 const variants = {
@@ -151,6 +152,9 @@ export default function Blog({ blog }: any) {
 			transition={{ duration: 0.4, type: "easeInOut" }}
 			className="flex flex-row justify-center align-middle m-auto w-[100%] min-h-[20em] pt-[2em]"
 		>
+			<Head>
+				<title>Blog | {title}</title>
+			</Head>
 			<div className="w-[80%] mx-auto border-t-[1px] flex flex-col border-[#413f3f] mt-[4em] ml-[4em] pt-[2em] pr-[1em]">
 				<div className="flex flex-row text-[#a1a1aa] text-[1rem] justify-items-start align-middle mt-[0.5em] mb-[1em] font-normal">
 					<svg

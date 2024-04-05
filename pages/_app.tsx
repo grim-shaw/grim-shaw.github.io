@@ -1,5 +1,6 @@
 import "@/styles/globals.css"
 import type { AppProps } from "next/app"
+import Head from "next/head"
 import { useRouter } from "next/router"
 import { motion, AnimatePresence } from "framer-motion"
 import Navbar from "@/components/navbar"
@@ -10,6 +11,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
 	return (
 		<>
+			<Head>
+				<title>Usama Qureshi</title>
+			</Head>
 			<Navbar />
 			<AnimatePresence mode="wait">
 				<motion.div

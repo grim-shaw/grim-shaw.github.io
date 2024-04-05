@@ -2,6 +2,7 @@ import React from "react"
 import { motion } from "framer-motion"
 import BlogsList from "@/components/blogsList"
 import { createClient } from "contentful"
+import Head from "next/head"
 
 const variants = {
 	hidden: { opacity: 0, x: 0, y: 20 },
@@ -33,6 +34,9 @@ export default function Blog({ blogs }: any) {
 			variants={variants}
 			transition={{ duration: 0.4, type: "easeInOut" }}
 		>
+			<Head>
+				<title>Usama Qureshi | Blogs</title>
+			</Head>
 			<section className="flex flex-col justify-center align-middle m-auto w-[100%] h-[24em] pt-[4em]">
 				<div className="m-auto text-center w-[100%] h-[20em] relative">
 					<video

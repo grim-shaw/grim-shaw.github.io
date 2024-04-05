@@ -1,6 +1,7 @@
 import React from "react"
 import fs from "fs"
 import path from "path"
+import Head from "next/head"
 import { motion } from "framer-motion"
 
 import Catalogue from "@/components/catalogue"
@@ -32,6 +33,9 @@ export default function Projects({ projects }: any) {
 			variants={variants}
 			transition={{ duration: 0.4, type: "easeInOut" }}
 		>
+			<Head>
+				<title>Usama Qureshi | Projects</title>
+			</Head>
 			<div className="flex flex-col justify-center align-middle m-auto">
 				<div className="m-auto text-center mt-[7em]">
 					<p className="text-primary text-[1.25rem] font-jetbrain">

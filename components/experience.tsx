@@ -119,18 +119,18 @@ export default function Experience() {
 							<p className="w-[38em] text-left"></p>
 						</TabPanel> */}
 						<TabPanel value={value} index={0}>
-							<p className="w-[41em] text-left mb-[1em] text-primary font-semibold">
+							<div className="w-[41em] text-left mb-[1em] text-primary font-semibold">
 								Full Stack Intern @ ThinkSoft -{" "}
 								<span className="font-ubuntu text-[1em] text-secondary px-[0.5em] py-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
 									March, 2023 - July, 2023
 								</span>
-							</p>
-							<p className="w-[41em] break-words text-wrap text-left">
+							</div>
+							<div className="w-[41em] break-words text-wrap text-left">
 								Worked on a cutting-edge web development tool
 								called WebbsAI that combines drag-and-drop
 								functionality with Generative AI assistance to
 								simplify website creation process.
-							</p>
+							</div>
 							<br />
 							<div className="w-[41em] break-words text-wrap text-left">
 								<li>
@@ -168,7 +168,7 @@ export default function Experience() {
 										Next.js, Tailwind CSS, and TypeScript.
 									</span>
 								</li>
-								<p className="w-[41em] text-left mt-[1em] text-primary">
+								<div className="w-[41em] text-left mt-[1em] text-primary">
 									Tech Stack
 									<br />
 									<p className="w-[100%] mt-[1em] flex flex-row flex-wrap">
@@ -191,18 +191,18 @@ export default function Experience() {
 											Git/Github
 										</span>
 									</p>
-								</p>
+								</div>
 							</div>
 						</TabPanel>
 						<TabPanel value={value} index={1}>
-							<p className="w-[41em] text-left mb-[1em] leading-6 text-primary font-semibold">
+							<div className="w-[41em] text-left mb-[1em] leading-6 text-primary font-semibold">
 								Bachelor in Computer Science @ National
 								University of Science & Technology (NUST) -{" "}
 								<span className="font-ubuntu text-[1em] text-secondary px-[0.5em] py-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
 									June, 2020 - June, 2024
 								</span>
-							</p>
-							<p className="w-[41em] text-left">
+							</div>
+							<div className="w-[41em] text-left">
 								Studied computer science from School of
 								Electrical Engineering and Computer Science
 								(SEECS) at NUST. <br />
@@ -216,8 +216,8 @@ export default function Experience() {
 								Final Year Project was &ldquo;Explainable
 								Diabetic Retinopathy Severity Grading using Deep
 								Learning&rdquo; <br />
-							</p>
-							<p className="w-[41em] text-left mt-[1em] text-primary">
+							</div>
+							<div className="w-[41em] text-left mt-[1em] text-primary">
 								Major Courses
 								<br />
 								<p className="w-[100%] mt-[1em] flex flex-row flex-wrap">
@@ -244,7 +244,7 @@ export default function Experience() {
 										Deep Learning
 									</span>
 								</p>
-							</p>
+							</div>
 						</TabPanel>
 					</Box>
 				</ThemeProvider>

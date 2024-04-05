@@ -1,8 +1,10 @@
+import Head from "next/head"
+import { motion } from "framer-motion"
+
 import Intro from "@/components/intro"
 import Experience from "@/components/experience"
 import Technologies from "@/components/technologies"
 import ContactSection from "@/components/contactSection"
-import { motion } from "framer-motion"
 
 const variants = {
 	hidden: { opacity: 0, x: 0, y: 20 },
@@ -19,6 +21,9 @@ export default function Home() {
 			variants={variants}
 			transition={{ duration: 0.4, type: "easeInOut" }}
 		>
+			<Head>
+				<title>Usama Qureshi | Home</title>
+			</Head>
 			<Intro />
 			<Experience />
 			<Technologies />

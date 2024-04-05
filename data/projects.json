@@ -6,7 +6,7 @@
     "githubUrl": "https://github.com/Grimmer107/Search-Engine",
     "year": "2021",
     "featuredImage": "/search-engine.png",
-    "images": ["/search-engine.png"],
     "video": "",
+    "images": ["/search-engine.png"],
     "stack": ["Python", "Nltk", "Tkinter"]
 }]

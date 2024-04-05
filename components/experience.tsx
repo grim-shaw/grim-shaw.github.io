@@ -55,7 +55,7 @@ export default function Experience() {
 	return (
 		<div className="m-auto my-[2em] text-center bg-[#202023] flex flex-col justify-center align-middle w-[80%]">
 			<p className="font-ubuntu text-primary m-auto mt-[1em] text-[1.3rem]">
-				Experience
+				Education & Experience
 			</p>
 			<div className="flex flex-col justify-center align-middle min-w-[38em] m-auto mt-[1em]">
 				<ThemeProvider theme={theme}>
@@ -85,7 +85,7 @@ export default function Experience() {
 							}}
 						>
 							<Tab
-								label="ThinkSoft"
+								label="Software Engineer"
 								{...a11yProps(0)}
 								sx={{
 									color: "white",
@@ -93,8 +93,16 @@ export default function Experience() {
 								}}
 							/>
 							<Tab
-								label="Arbisoft"
+								label="Software Engineering Intern"
 								{...a11yProps(1)}
+								sx={{
+									color: "white",
+									fontFamily: "Ubuntu Mono"
+								}}
+							/>
+							<Tab
+								label="Computer Science Undergrad"
+								{...a11yProps(2)}
 								sx={{
 									color: "white",
 									fontFamily: "Ubuntu Mono"
@@ -102,12 +110,26 @@ export default function Experience() {
 							/>
 						</Tabs>
 						<TabPanel value={value} index={0}>
+							<p className="w-[38em] text-left mb-[1em] text-primary font-semibold">
+								Software Engineer @ Arbisoft -{" "}
+								<span className="font-ubuntu text-[1em] text-secondary px-[0.5em] py-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+									June, 2024 -
+								</span>
+							</p>
+							<p className="w-[38em] text-left"></p>
+						</TabPanel>
+						<TabPanel value={value} index={1}>
+							<p className="w-[38em] text-left mb-[1em] text-primary font-semibold">
+								Full Stack Intern @ ThinkSoft -{" "}
+								<span className="font-ubuntu text-[1em] text-secondary px-[0.5em] py-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+									March, 2023 - July, 2023
+								</span>
+							</p>
 							<p className="w-[38em] break-words text-wrap text-left">
-								Worked as Full-Stack Intern on a cutting-edge
-								web development tool called WebbsAI that
-								combines drag-and-drop functionality with
-								Generative AI assistance to simplify website
-								creation process.
+								Worked on a cutting-edge web development tool
+								called WebbsAI that combines drag-and-drop
+								functionality with Generative AI assistance to
+								simplify website creation process.
 							</p>
 							<br />
 							<div className="w-[38em] break-words text-wrap text-left">
@@ -146,11 +168,82 @@ export default function Experience() {
 										Next.js, Tailwind CSS, and TypeScript.
 									</span>
 								</li>
+								<p className="w-[41em] text-left mt-[1em] text-primary">
+									Tech Stack
+									<br />
+									<p className="w-[100%] mt-[1em] flex flex-row flex-wrap">
+										<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+											TypeScript
+										</span>
+										<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+											Next JS
+										</span>
+										<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+											Tailwind CSS
+										</span>
+										<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+											MongoDB
+										</span>
+										<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+											Mongoose
+										</span>
+										<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+											Github
+										</span>
+									</p>
+								</p>
 							</div>
 						</TabPanel>
-						<TabPanel value={value} index={1}>
+						<TabPanel value={value} index={2}>
+							<p className="w-[38em] text-left mb-[1em] leading-6 text-primary font-semibold">
+								Bachelor in Computer Science @ National
+								University of Science & Technology (NUST) -{" "}
+								<span className="font-ubuntu text-[1em] text-secondary px-[0.5em] py-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+									June, 2020 - June, 2024
+								</span>
+							</p>
 							<p className="w-[38em] text-left">
-								Starting in June, 2024
+								Studied computer science from School of
+								Electrical Engineering and Computer Science
+								(SEECS) at NUST. <br />
+								Graduated with CGPA of 3.82/4.00. Received
+								GPA-Based Academic Scholarship in 7 out of 8
+								semsters.
+								<br />
+								Worked as an Executive in IEEE SEECS in
+								Publication chapter for duration of 1 year.{" "}
+								<br />
+								Final Year Project was &ldquo;Explainable
+								Diabetic Retinopathy Severity Grading using Deep
+								Learning&rdquo; <br />
+							</p>
+							<p className="w-[41em] text-left mt-[1em] text-primary">
+								Major Courses
+								<br />
+								<p className="w-[100%] mt-[1em] flex flex-row flex-wrap">
+									<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+										Data Structures & Algorithms
+									</span>
+									<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+										Database Systems
+									</span>
+									<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+										Operating System
+									</span>
+									<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+										Theory of Automata
+									</span>
+									<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+										Computer Architecture & Assembly
+										Language
+									</span>
+									<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+										Artificial Intelligence
+									</span>
+									<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+										Deep Learning
+									</span>
+								</p>
 							</p>
 						</TabPanel>
 					</Box>

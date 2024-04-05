@@ -1,6 +1,7 @@
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 export default function SingleProject(props: any) {
 	const { title, featuredText, featuredImage } = props
@@ -24,12 +25,13 @@ export default function SingleProject(props: any) {
 					{featuredText}
 				</p>
 				<Link href={`/projects/${title}`}>
-					<div
+					<motion.div
 						data-ripple-light="true"
+						whileHover={{ scale: 1.05 }}
 						className="border-[1px] mt-[2em] py-[0.25em] text-primary bg-[#18181B] transition-colors duration-200 ease-linear rounded-[0.5em] border-[#27272A] hover:bg-primary hover:text-black text-[0.9em] font-ubuntu font-semibold text-center"
 					>
 						<p role="button">Details</p>
-					</div>
+					</motion.div>
 				</Link>
 			</div>
 		</div>

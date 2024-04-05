@@ -1,5 +1,6 @@
 import Intro from "@/components/intro"
 import Experience from "@/components/experience"
+import Technologies from "@/components/technologies"
 import { motion } from "framer-motion"
 
 const variants = {
@@ -19,6 +20,7 @@ export default function Home() {
 		>
 			<Intro />
 			<Experience />
+			<Technologies />
 		</motion.div>
 	)
 }

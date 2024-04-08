@@ -46,13 +46,13 @@ export async function getStaticProps({ params }: any) {
 }
 
 export default function Project({ project }: any) {
-	if (!project) {
-		return (
-			<section className="text-primary text-[1.25rem] text-center font-ubuntu flex flex-col justify-center align-middle m-auto w-[50%] mx-auto h-[85vh] pt-[8em]">
-				Loading....
-			</section>
-		)
-	}
+	// if (!project) {
+	// 	return (
+	// 		<section className="text-primary text-[1.25rem] text-center font-ubuntu flex flex-col justify-center align-middle m-auto w-[50%] mx-auto h-[85vh] pt-[8em]">
+	// 			Loading....
+	// 		</section>
+	// 	)
+	// }
 
 	return <ProjectDetails project={project} />
 }

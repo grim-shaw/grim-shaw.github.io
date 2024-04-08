@@ -20,8 +20,7 @@ export async function getStaticProps() {
 	return {
 		props: {
 			projects: fileData
-		},
-		revalidate: 100
+		}
 	}
 }
 

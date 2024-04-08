@@ -56,14 +56,14 @@ export async function getStaticProps({ params }: any) {
 		"fields.slug": params.slug
 	})
 
-	if (!items.length) {
-		return {
-			redirect: {
-				destination: "/",
-				permanent: false
-			}
-		}
-	}
+	// if (!items.length) {
+	// 	return {
+	// 		redirect: {
+	// 			destination: "/",
+	// 			permanent: false
+	// 		}
+	// 	}
+	// }
 
 	return {
 		props: { blog: items[0] }

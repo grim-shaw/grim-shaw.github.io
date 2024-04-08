@@ -31,14 +31,14 @@ export async function getStaticProps({ params }: any) {
 		(project: any) => project.title === params.slug
 	)
 
-	if (!items.length) {
-		return {
-			redirect: {
-				destination: "/",
-				permanent: false
-			}
-		}
-	}
+	// if (!items.length) {
+	// 	return {
+	// 		redirect: {
+	// 			destination: "/",
+	// 			permanent: false
+	// 		}
+	// 	}
+	// }
 
 	return {
 		props: { project: items[0] }

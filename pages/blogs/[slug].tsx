@@ -141,7 +141,9 @@ function renderBlogContent(blogContent: any) {
 }
 
 export default function Blog({ blog }: any) {
-	const { title, readingTime, blogContent, publishedTime, tags } = blog.fields
+	console.log(blog)
+	const { title, readingTime, blogContent, publishedTime, tags, language } =
+		blog.fields
 
 	return (
 		<motion.section

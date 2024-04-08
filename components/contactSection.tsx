@@ -14,7 +14,7 @@ export default function ContactSection() {
 						<svg
 							stroke="#71717a"
 							fill="#71717a"
-							stroke-width="0"
+							strokeWidth="0"
 							viewBox="0 0 24 24"
 							className="flex-shrink-0 h-[1.75em] inline w-[1.75em] hover:stroke-white hover:fill-white transition-colors duration-300"
 							aria-hidden="true"

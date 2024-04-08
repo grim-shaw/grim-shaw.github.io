@@ -9,7 +9,7 @@ export default function ContactSection() {
 			</p>
 			<p className="text-center text-[0.85em] text-white font-oxygen leading-8">
 				You can reach out to me through{" "}
-				<Link href={"www.linkedin.com/in/usamaqureshi01"}>
+				<Link href={"https://www.linkedin.com/in/usamaqureshi01/"}>
 					<span className="w-[2.5em] h-[2.5em] cursor-pointer">
 						<svg
 							stroke="#71717a"

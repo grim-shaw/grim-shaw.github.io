@@ -46,7 +46,7 @@ export const getStaticPaths = async () => {
 
 	return {
 		paths,
-		fallback: false
+		fallback: true
 	}
 }
 
@@ -56,8 +56,18 @@ export async function getStaticProps({ params }: any) {
 		"fields.slug": params.slug
 	})
 
+	if (!items.length) {
+		return {
+			redirect: {
+				destination: "/",
+				permanent: false
+			}
+		}
+	}
+
 	return {
-		props: { blog: items[0] }
+		props: { blog: items[0] },
+		revalidate: 100
 	}
 }
 
@@ -141,6 +151,14 @@ function renderBlogContent(blogContent: any) {
 }
 
 export default function Blog({ blog }: any) {
+	if (!blog) {
+		return (
+			<section className="text-primary text-[1.25rem] text-center font-ubuntu flex flex-col justify-center align-middle m-auto w-[50%] mx-auto h-[85vh] pt-[8em]">
+				Loading....
+			</section>
+		)
+	}
+
 	const { title, readingTime, blogContent, publishedTime, tags } = blog.fields
 
 	return (

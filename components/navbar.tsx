@@ -10,11 +10,8 @@ export default function Navbar() {
 		<div
 			className={`flex flex-row m-0 pb-[0.5em] z-10 pt-[1em] mb-[1em] backdrop-filter backdrop-blur-[16px] backdrop-saturate-150 fixed justify-center h-[4em] align-middle font-jetbrain text-[0.9rem] w-[100%]`}
 		>
-			<div className="border-[1px] text-[#bbb] border-[#413f3f] hover:border-[#c0bbbb] cursor-pointer rounded-[10px] mx-[1em] flex flex-col justify-center align-middle">
-				<Link
-					href={"/"}
-					className="flex flex-row justify-center align-middle m-0 my-auto mx-auto px-[1em]"
-				>
+			<Link href={"/"}>
+				<div className="flex flex-row justify-center align-middle m-0 my-auto h-[2.5em] px-[1em] border-[1px] text-[#bbb] border-[#413f3f] hover:border-[#c0bbbb] cursor-pointer rounded-[10px] mx-[1em]">
 					<Image
 						width={20}
 						height={20}
@@ -25,13 +22,10 @@ export default function Navbar() {
 						className="m-0 my-auto"
 					/>
 					<p className="m-0 mx-auto my-auto ml-1">About</p>
-				</Link>
-			</div>
-			<div className="border-[1px] text-[#bbb] border-[#413f3f] rounded-[10px] hover:border-[#c0bbbb] cursor-pointer mx-[1em] flex flex-col justify-center align-middle">
-				<Link
-					href={"/projects"}
-					className="flex flex-row justify-center align-middle m-0 my-auto mx-auto px-[1em]"
-				>
+				</div>
+			</Link>
+			<Link href={"/projects"}>
+				<div className="flex flex-row justify-center align-middle m-0 my-auto h-[2.5em] px-[1em] border-[1px] text-[#bbb] border-[#413f3f] hover:border-[#c0bbbb] cursor-pointer rounded-[10px] mx-[1em]">
 					<Image
 						width={20}
 						height={20}
@@ -42,13 +36,10 @@ export default function Navbar() {
 						className="m-0 my-auto"
 					/>
 					<p className="m-0 mx-auto my-auto ml-1">Projects</p>
-				</Link>
-			</div>
-			<div className="border-[1px] text-[#bbb] border-[#413f3f] rounded-[10px] transition transition-duration-2000 transform hover:border-[#c0bbbb] cursor-pointer mx-[1em] flex flex-col justify-center align-middle">
-				<Link
-					href={"/blogs"}
-					className="flex flex-row justify-center align-middle m-0 my-auto mx-auto px-[1em]"
-				>
+				</div>
+			</Link>
+			<Link href={"/blogs"}>
+				<div className="flex flex-row justify-center align-middle m-0 my-auto h-[2.5em] px-[1em] border-[1px] text-[#bbb] border-[#413f3f] hover:border-[#c0bbbb] cursor-pointer rounded-[10px] mx-[1em]">
 					<Image
 						width={20}
 						height={20}
@@ -59,13 +50,10 @@ export default function Navbar() {
 						className="m-0 my-auto"
 					/>
 					<p className="m-0 mx-auto my-auto ml-1">Blog</p>
-				</Link>
-			</div>
-			<div className="border-[1px] text-[#bbb] border-[#413f3f] rounded-[10px] hover:border-[#c0bbbb] cursor-pointer mx-[1em] flex flex-col justify-center align-middle">
-				<Link
-					href={"https://github.com/Grimmer107"}
-					className="flex flex-row justify-center align-middle m-0 my-auto mx-auto px-[1em]"
-				>
+				</div>
+			</Link>
+			<Link href={"https://github.com/Grimmer107"}>
+				<div className="flex flex-row justify-center align-middle m-0 my-auto h-[2.5em] px-[1em] border-[1px] text-[#bbb] border-[#413f3f] hover:border-[#c0bbbb] cursor-pointer rounded-[10px] mx-[1em]">
 					<Image
 						width={20}
 						height={20}
@@ -76,8 +64,8 @@ export default function Navbar() {
 						className="m-0 my-auto"
 					/>
 					<p className="m-0 mx-auto my-auto ml-1">Github</p>
-				</Link>
-			</div>
+				</div>
+			</Link>
 		</div>
 	)
 }

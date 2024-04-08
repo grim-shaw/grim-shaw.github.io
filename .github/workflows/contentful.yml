@@ -1,4 +1,4 @@
-name: Eleventy Build on Contentful Publish Event
+name: Build on Contentful Publish Event
 on:
     repository_dispatch:
         types: [publish-event]
@@ -7,11 +7,11 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v4
             - name: Setup Node
-              uses: actions/setup-node@v1
+              uses: actions/setup-node@v4
               with:
-                  node-version: "12.x"
+                  node-version: "20"
 
             - name: Cache dependencies
               uses: actions/cache@v1

@@ -65,7 +65,7 @@ export default function Blog({ blogs }: any) {
 				</div>
 			</section>
 			<section className="m-auto flex w-[100%] flex-col justify-center py-[3em] align-middle">
-				<div className="m-auto mb-[1em] flex w-[70%] flex-row text-left">
+				<div className="m-auto mb-[1em] flex w-[90%] flex-row text-left min-[390px]:w-[70%]">
 					<svg
 						stroke="white"
 						fill="white"
@@ -79,7 +79,7 @@ export default function Blog({ blogs }: any) {
 						<path d="M20 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM4 19V5h16l.002 14H4z"></path>
 						<path d="M6 7h12v2H6zm0 4h12v2H6zm0 4h6v2H6z"></path>
 					</svg>
-					<p className="ml-[0.5em] font-ubuntu text-[1.25rem] text-white">
+					<p className="ml-[0.5em] font-ubuntu text-[1.1rem] text-white min-[390px]:text-[1.25rem]">
 						Explore All
 					</p>
 				</div>

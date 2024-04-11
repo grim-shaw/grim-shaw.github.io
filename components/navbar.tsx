@@ -6,12 +6,14 @@ import React from "react"
 // const inter = Inter({ subsets: ["latin"] })
 
 export default function Navbar() {
+	const [dropdownShow, setDropdownShow] = React.useState<boolean>(false)
+
 	return (
 		<div
-			className={`flex flex-row m-0 pb-[0.5em] z-10 pt-[1em] mb-[1em] backdrop-filter backdrop-blur-[16px] backdrop-saturate-150 fixed justify-center h-[4em] align-middle font-jetbrain text-[0.9rem] w-[100%]`}
+			className={`fixed z-10 m-0 mb-[1em] flex h-[4em] w-[100%] flex-row justify-end pb-[0.5em] pt-[1em] align-middle font-jetbrain text-[0.9rem] backdrop-blur-[16px] backdrop-saturate-150 backdrop-filter min-[520px]:justify-center`}
 		>
 			<Link href={"/"}>
-				<div className="flex flex-row justify-center align-middle m-0 my-auto h-[2.5em] px-[1em] border-[1px] text-[#bbb] border-[#413f3f] hover:border-[#c0bbbb] cursor-pointer rounded-[10px] mx-[1em]">
+				<div className="m-0 mx-[1em] my-auto hidden h-[2.5em] cursor-pointer flex-row justify-center rounded-[10px] border-[1px] border-[#413f3f] px-[1em] align-middle text-[#bbb] hover:border-[#c0bbbb] min-[520px]:flex">
 					<Image
 						width={20}
 						height={20}
@@ -25,7 +27,7 @@ export default function Navbar() {
 				</div>
 			</Link>
 			<Link href={"/projects"}>
-				<div className="flex flex-row justify-center align-middle m-0 my-auto h-[2.5em] px-[1em] border-[1px] text-[#bbb] border-[#413f3f] hover:border-[#c0bbbb] cursor-pointer rounded-[10px] mx-[1em]">
+				<div className="m-0 mx-[1em] my-auto hidden h-[2.5em] cursor-pointer flex-row justify-center rounded-[10px] border-[1px] border-[#413f3f] px-[1em] align-middle text-[#bbb] hover:border-[#c0bbbb] min-[520px]:flex">
 					<Image
 						width={20}
 						height={20}
@@ -39,7 +41,7 @@ export default function Navbar() {
 				</div>
 			</Link>
 			<Link href={"/blogs"}>
-				<div className="flex flex-row justify-center align-middle m-0 my-auto h-[2.5em] px-[1em] border-[1px] text-[#bbb] border-[#413f3f] hover:border-[#c0bbbb] cursor-pointer rounded-[10px] mx-[1em]">
+				<div className="m-0 mx-[1em] my-auto hidden h-[2.5em] cursor-pointer flex-row justify-center rounded-[10px] border-[1px] border-[#413f3f] px-[1em] align-middle text-[#bbb] hover:border-[#c0bbbb] min-[520px]:flex">
 					<Image
 						width={20}
 						height={20}
@@ -53,7 +55,7 @@ export default function Navbar() {
 				</div>
 			</Link>
 			<Link href={"https://github.com/Grimmer107"}>
-				<div className="flex flex-row justify-center align-middle m-0 my-auto h-[2.5em] px-[1em] border-[1px] text-[#bbb] border-[#413f3f] hover:border-[#c0bbbb] cursor-pointer rounded-[10px] mx-[1em]">
+				<div className="m-0 mx-[1em] my-auto hidden h-[2.5em] cursor-pointer flex-row justify-center rounded-[10px] border-[1px] border-[#413f3f] px-[1em] align-middle text-[#bbb] hover:border-[#c0bbbb] min-[520px]:flex">
 					<Image
 						width={20}
 						height={20}
@@ -66,6 +68,36 @@ export default function Navbar() {
 					<p className="m-0 mx-auto my-auto ml-1">Github</p>
 				</div>
 			</Link>
+			<div
+				onClick={() => setDropdownShow(prevState => !prevState)}
+				className={`relative mr-[1em] ${dropdownShow ? "bg-primary text-black" : ""} flex cursor-pointer flex-col justify-center rounded-[0.5rem] border-[1px] border-[#413f3f] px-[0.8em] py-[0.8rem] text-center text-[1.25rem] text-primary hover:bg-primary hover:text-black min-[520px]:hidden`}
+			>
+				<i className="fa-solid fa-bars m-auto"></i>
+				<div
+					className={`absolute right-[-0.1em] top-[3.75em] z-10 flex-col bg-[#202023] text-[0.85rem] text-primary ${dropdownShow ? "flex" : "hidden"} rounded-[0.5em] border-[1px] border-[#413f3f]`}
+				>
+					<Link href={"/"}>
+						<div className="m-auto w-[100%] rounded-t-[0.5em] border-b-[1px] border-[#413f3f] px-[2em] py-[0.75em] hover:bg-[#18181B]">
+							About
+						</div>
+					</Link>
+					<Link href={"/projects"}>
+						<div className="m-auto w-[100%] border-b-[1px] border-[#413f3f] px-[2em] py-[0.75em] hover:bg-[#18181B]">
+							Projects
+						</div>
+					</Link>
+					<Link href={"/blogs"}>
+						<div className="m-auto w-[100%] border-b-[1px] border-[#413f3f] px-[2em] py-[0.75em] hover:bg-[#18181B]">
+							Blogs
+						</div>
+					</Link>
+					<Link href={"https://github.com/Grimmer107"}>
+						<div className="m-auto w-[100%] rounded-b-[0.5em] px-[2em] py-[0.75em] hover:bg-[#18181B]">
+							GitHub
+						</div>
+					</Link>
+				</div>
+			</div>
 		</div>
 	)
 }

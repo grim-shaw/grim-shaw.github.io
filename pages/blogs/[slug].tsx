@@ -73,7 +73,7 @@ const find = (array: any, condition: any) => {
 const customMarkdownOptions = (content: any) => ({
 	renderMark: {
 		[MARKS.CODE]: (text: any) => (
-			<span className="bg-[#282c34] text-white border-[#6e6e8966] border-[1px] px-[0.3em] py-[0.1em] rounded-[0.25em]">
+			<span className="overflow-x-scroll rounded-[0.25em] border-[1px] border-[#6e6e8966] bg-[#282c34] px-[0.3em] py-[0.1em] text-white">
 				{text}
 			</span>
 		)
@@ -81,7 +81,7 @@ const customMarkdownOptions = (content: any) => ({
 	renderNode: {
 		[BLOCKS.HEADING_4]: (node: any, children: any) => {
 			return (
-				<h4 className="text-primary text-[1.1rem] mt-[1rem] font-ubuntu font-semibold">
+				<h4 className="mt-[1rem] font-ubuntu text-[1.1rem] font-semibold text-primary">
 					{children}
 				</h4>
 			)
@@ -90,7 +90,7 @@ const customMarkdownOptions = (content: any) => ({
 			return (
 				<Link
 					href={node.data.uri}
-					className="text-secondary cursor-pointer hover:underline"
+					className="cursor-pointer text-secondary hover:underline"
 				>
 					{children}
 					<svg
@@ -98,7 +98,7 @@ const customMarkdownOptions = (content: any) => ({
 						fill="#2bbc8a"
 						strokeWidth="0"
 						viewBox="0 0 24 24"
-						className="inline ml-1"
+						className="ml-1 inline"
 						aria-hidden="true"
 						height="1.25em"
 						width="1.25em"
@@ -141,7 +141,6 @@ function renderBlogContent(blogContent: any) {
 }
 
 export default function Blog({ blog }: any) {
-	console.log(blog)
 	const { title, readingTime, blogContent, publishedTime, tags, language } =
 		blog.fields
 
@@ -152,16 +151,16 @@ export default function Blog({ blog }: any) {
 			exit={"exit"}
 			variants={variants}
 			transition={{ duration: 0.4, type: "easeInOut" }}
-			className="flex flex-row justify-center align-middle m-auto w-[100%] min-h-[20em] pt-[2em]"
+			className="m-auto flex min-h-[20em] w-[100%] flex-col justify-center pt-[2em] align-middle md:flex-row"
 		>
 			<Head>
 				<title>Blog | {title}</title>
 			</Head>
-			<div className="w-[80%] mx-auto border-t-[1px] flex flex-col border-[#413f3f] mt-[4em] ml-[4em] pt-[2em] pr-[1em]">
-				<div className="flex flex-row text-[#a1a1aa] text-[1rem] justify-items-start align-middle mt-[0.5em] mb-[1em] font-normal">
+			<div className="mx-auto mt-[3em] flex w-[90%] flex-col border-t-[1px] border-[#413f3f] pr-[1em] pt-[2em] sm:ml-[4em] sm:w-[80%]">
+				<div className="mb-[1em] mt-[0.5em] flex flex-row justify-items-start align-middle text-[0.85rem] font-normal text-[#a1a1aa] lg:text-[0.95rem]">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						className="inline-block fill-[#a1a1aa] h-6 scale-75 w-[1.375rem] my-auto"
+						className="my-auto inline-block h-6 w-[1.375rem] scale-75 fill-[#a1a1aa]"
 						aria-hidden="true"
 					>
 						<path d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"></path>
@@ -178,27 +177,27 @@ export default function Blog({ blog }: any) {
 						height="1.2em"
 						width="1.2em"
 						xmlns="http://www.w3.org/2000/svg"
-						className="scale-110 my-auto ml-[3em]"
+						className="my-auto ml-[3em] scale-110"
 					>
 						<path d="M12.25 2c-5.514 0-10 4.486-10 10s4.486 10 10 10 10-4.486 10-10-4.486-10-10-10zM18 13h-6.75V6h2v5H18v2z"></path>
 					</svg>
 					<p className="my-auto ml-[0.5em]">{readingTime} min</p>
 				</div>
-				<p className="text-primary font-ubuntu text-[1.75em] mb-[1em]">
+				<p className="mb-[1em] font-ubuntu text-[1.3rem] text-primary lg:text-[1.6em]">
 					{title}
 				</p>
-				<div className="text-white font-fira font-light text-[0.85em] opacity-80">
+				<div className="font-fira text-[0.8rem] font-light text-white opacity-80 md:text-[0.85em]">
 					{renderBlogContent(blogContent)}
 				</div>
 			</div>
-			<div className="flex flex-start flex-col border-l-[1px] border-t-[1px] border-[#413f3f] text-white w-[20em] text-[0.8rem] mt-[5em] pt-[2em] mr-[3em] pl-[2em] pr-[1em]">
-				<div className="w-[100%] font-fira text-lg mt-[0.5em]">
+			<div className="flex-start mx-auto mt-[2em] flex w-[90%] flex-col border-t-[1px] border-[#413f3f] pl-[2em] pr-[1em] pt-[2em] text-[0.8rem] text-white sm:ml-[4em] sm:w-[80%] md:ml-0 md:mr-[3em] md:mt-[3.75em] md:w-[20%] md:border-l-[1px]">
+				<div className="mt-[0.5em] w-[100%] font-fira text-lg">
 					<h4 className="text-lg">Tags</h4>
 				</div>
-				<div className="w-[100%] mt-[1em] flex flex-wrap items-center gap-x-[0.1em] gap-y-3 tracking-tight">
+				<div className="mt-[1em] flex w-[100%] flex-wrap items-center gap-x-[0.1em] gap-y-3 tracking-tight">
 					{tags.map((tag: string) => (
 						<span
-							className="border-[1px] border-[#40405866] font-semibold bg-zinc-800 mr-[1em] px-2 py-1 text-[0.85rem] rounded-md"
+							className="mr-[1em] rounded-md border-[1px] border-[#40405866] bg-zinc-800 px-2 py-1 text-[0.85rem] font-semibold"
 							key={tag}
 						>
 							{tag}

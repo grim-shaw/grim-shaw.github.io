@@ -20,55 +20,55 @@ export default function ProjectDetails({ project }: any) {
 			exit={"exit"}
 			variants={variants}
 			transition={{ duration: 0.4, type: "easeInOut" }}
-			className="text-primary text-center flex flex-col justify-center align-middle m-auto w-[50%] mx-auto min-h-[24em] pt-[8em]"
+			className="m-auto mx-auto flex min-h-[24em] w-[90%] flex-col justify-center pt-[8em] text-center align-middle text-primary min-[390px]:w-[85%] sm:w-[80%] md:w-[65%] lg:w-[50%]"
 		>
 			<Head>
 				<title>Projects | {title}</title>
 			</Head>
-			<div className="text-left font-ubuntu font-semibold text-[1.2rem] px-[2.8em] flex flex-row">
+			<div className="ml-0 flex flex-row justify-start text-left font-ubuntu text-[1.1rem] font-semibold md:text-[1.2rem]">
 				<span className="underline underline-offset-4">Projects</span>
 				&nbsp;{">"}&nbsp;{title}
-				<span className="text-primary bg-[#f9731629] font-ubuntu font-light text-[0.9rem] m-auto ml-[1em] px-[0.2em] py-[0.2em] text-center rounded-[0.25em] inline-block">
+				<span className="m-auto ml-[1em] inline-block rounded-[0.25em] bg-[#f9731629] px-[0.2em] py-[0.2em] text-center font-ubuntu text-[0.9rem] font-light text-primary">
 					{year}
 				</span>
 			</div>
-			<div className="font-oxygen break-words text-justify text-[0.8rem] mt-[2em] text-white opacity-85 pl-[4em]">
-				<p className="font-ubuntu bg-[#f9731629] text-primary text-[1.1rem] px-[0.1em] py-[0.1em] rounded-[0.25em] font-semibold my-[0.5em] w-[6.5em] text-center">
+			<div className="mx-auto mt-[2em] break-words text-justify font-oxygen text-[0.75rem] text-white opacity-85 md:text-[0.8rem]">
+				<p className="my-[0.5em] w-[6.5em] rounded-[0.25em] bg-[#f9731629] px-[0.1em] py-[0.1em] text-center font-ubuntu text-[1rem] font-semibold text-primary md:text-[1.1rem]">
 					Description
 				</p>
 				{description}
 			</div>
-			<div className="text-left flex flex-row px-[3em] mt-[3em] mb-[1em]">
+			<div className="mb-[1em] mt-[3em] flex flex-row text-left">
 				<p>
-					<span className="text-primary mr-[0.5em] bg-[#f9731629] font-ubuntu font-light text-[0.9rem] m-auto px-[0.25em] py-[0.2em] text-center rounded-[0.25em] inline-block">
+					<span className="m-auto inline-block rounded-[0.25em] bg-[#f9731629] px-[0.25em] py-[0.2em] text-center font-ubuntu text-[0.775rem] font-light text-primary sm:text-[0.88rem] md:text-[0.9rem]">
 						Source
 					</span>
-					-
+					<span className="mx-[0.5em]">-</span>
 					<Link href={githubUrl}>
-						<span className="ml-[0.5em] text-[0.8em] font-oxygen text-secondary px-[0.5em] py-[0.5em] rounded-[0.25em] bg-[#2bbc8a29] hover:underline hover:underline-offset-4 cursor-pointer">
+						<span className="cursor-pointer text-wrap break-words rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-oxygen text-[0.65rem] text-secondary hover:underline hover:underline-offset-4 sm:text-[0.75rem] md:text-[0.8rem]">
 							{githubUrl}
 						</span>
 					</Link>
 				</p>
 			</div>
 			{projectUrl ? (
-				<div className="text-left flex flex-row px-[3em] mb-[0.5em]">
+				<div className="mb-[0.5em] flex flex-row text-left">
 					<p>
-						<span className="text-primary mr-[0.5em] bg-[#f9731629] font-ubuntu font-light text-[0.9rem] m-auto px-[0.25em] py-[0.2em] text-center rounded-[0.25em] inline-block">
+						<span className="m-auto inline-block rounded-[0.25em] bg-[#f9731629] px-[0.25em] py-[0.2em] text-center font-ubuntu font-light  text-primary sm:text-[0.88rem] md:text-[0.9rem]">
 							Demo
 						</span>
-						-
+						<span className="mx-[0.5em]">-</span>
 						<Link href={projectUrl}>
-							<span className="ml-[0.5em] text-[0.8em] font-oxygen text-secondary px-[0.5em] py-[0.5em] rounded-[0.25em] bg-[#2bbc8a29] hover:underline hover:underline-offset-4 cursor-pointer">
+							<span className="cursor-pointer text-wrap break-words rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-oxygen text-[0.8em] text-secondary hover:underline hover:underline-offset-4">
 								{projectUrl}
 							</span>
 						</Link>
 					</p>
 				</div>
 			) : null}
-			<div className="text-left flex flex-row px-[3em] mb-[1em]">
+			<div className="mb-[1em] flex flex-row text-left">
 				<p>
-					<span className="text-primary mr-[0.5em] bg-[#f9731629] font-ubuntu font-light text-[0.9rem] m-auto px-[0.25em] py-[0.2em] text-center rounded-[0.25em] inline-block">
+					<span className="m-auto mr-[0.5em] inline-block rounded-[0.25em] bg-[#f9731629] px-[0.25em] py-[0.2em] text-center font-ubuntu text-[0.8rem] font-light text-primary sm:text-[0.88rem] md:text-[0.9rem]">
 						Stack
 					</span>
 					-
@@ -76,7 +76,7 @@ export default function ProjectDetails({ project }: any) {
 						return (
 							<span
 								key={technology}
-								className="ml-[0.5em] font-semibold text-[0.8em] font-oxygen text-secondary px-[0.5em] py-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]"
+								className="ml-[0.5em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-oxygen text-[0.65rem] font-semibold text-secondary sm:text-[0.75rem] md:text-[0.8em]"
 							>
 								{technology}
 							</span>
@@ -85,12 +85,12 @@ export default function ProjectDetails({ project }: any) {
 				</p>
 			</div>
 			{images && images.length > 0 ? (
-				<div className="flex flex-col w-[100%] mt-[2em] mb-[1em] pl-[3em] mx-auto justify-center">
+				<div className="mx-auto mb-[1em] mt-[2em] flex w-[100%] flex-col justify-center">
 					{images.map((image: string) => {
 						return (
 							<div
 								key={image}
-								className="h-[20em] overflow-clip relative mb-[1em] shadow-md shadow-black"
+								className="relative mb-[1em] h-[20em] overflow-clip shadow-md shadow-black"
 							>
 								<Image
 									src={image}

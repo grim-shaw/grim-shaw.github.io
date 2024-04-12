@@ -70,7 +70,7 @@ export default function Navbar() {
 			</Link>
 			<div
 				onClick={() => setDropdownShow(prevState => !prevState)}
-				className={`relative mr-[1em] ${dropdownShow ? "bg-primary text-black" : ""} flex cursor-pointer flex-col justify-center rounded-[0.5rem] border-[1px] border-[#413f3f] px-[0.8em] py-[0.8rem] text-center text-[1.25rem] text-primary hover:bg-primary hover:text-black min-[520px]:hidden`}
+				className={`relative mr-[1em] ${dropdownShow ? "bg-primary text-black" : "text-primary"} flex cursor-pointer flex-col justify-center rounded-[0.5rem] border-[1px] border-[#413f3f] px-[0.8em] py-[0.8rem] text-center text-[1.25rem] hover:bg-primary hover:text-black min-[520px]:hidden`}
 			>
 				<i className="fa-solid fa-bars m-auto"></i>
 				<div

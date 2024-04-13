@@ -3,7 +3,7 @@ import SingleProject from "./singleProject"
 
 export default function Catalogue({ projects }: any) {
 	return (
-		<div className="mt-[2em] mb-[4em] w-[85%] h-min-[20em] m-auto flex flex-row flex-wrap gap-4 gap-y-8 tracking-tight">
+		<div className="h-min-[20em] mx-auto mb-[4em] mt-[2em] flex w-[100%] flex-wrap justify-center gap-4 gap-y-8 tracking-tight">
 			{projects &&
 				projects.length > 0 &&
 				projects.map((project: any) => {

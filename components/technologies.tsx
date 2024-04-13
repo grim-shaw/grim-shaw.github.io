@@ -3,156 +3,151 @@ import React from "react"
 
 export default function Technologies() {
 	return (
-		<div className="w-[50%] flex flex-col justify-start m-auto my-[2em]">
-			<div className="font-ubuntu text-primary m-auto my-[1em] text-[1.3rem] underline underline-offset-4">
+		<div className="m-auto my-[2em] flex w-[95%] flex-col align-middle text-[1rem] min-[768px]:w-[85%] min-[1025px]:w-[75%] min-[1441px]:w-[50%]">
+			<div className="m-auto my-[1em] text-center font-ubuntu text-[1.2rem] text-primary underline underline-offset-4 md:text-[1.3rem]">
 				Tools & Technologies
 			</div>
-			<div className="flex flex-row justify-start pl-[3em] pt-[0.5em]">
-				<div className="w-[7.4em]">
-					<span className="text-primary bg-[#f9731629] font-ubuntu font-semibold text-[0.9rem] m-auto ml-[1em] px-[0.4em] py-[0.4em] text-center rounded-[0.25em] inline-block">
-						LANGUAGES
-					</span>
-					<span className="text-white mx-[0.25em]">-</span>&nbsp;
+			<div className="mx-auto flex w-[95%] flex-col min-[425px]:w-[80%] min-[768px]:w-[80%] min-[1024px]:w-[72.5%] min-[1440px]:w-[60%]">
+				<div className="flex flex-row justify-start pt-[0.5em]">
+					<div className="w-[7em]">
+						<span className="m-auto inline-block w-[7em] rounded-[0.25em] bg-[#f9731629] px-[0.4em] py-[0.4em] text-center font-ubuntu text-[0.7rem] font-semibold text-primary md:text-[0.9rem]">
+							LANGUAGES
+						</span>
+					</div>
+					<div className="ml-[1em] flex w-[100%] flex-row flex-wrap justify-start gap-2 font-ubuntu text-[0.7rem] text-secondary md:text-[0.9rem]">
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Python
+						</span>
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							JavaScript
+						</span>
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							TypeScript
+						</span>
+					</div>
 				</div>
-				<div className="flex flex-row flex-wrap justify-center gap-2">
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Python
-					</span>
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						JavaScript
-					</span>
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						TypeScript
-					</span>
+				<div className="flex flex-row justify-start pt-[0.5em]">
+					<div className="w-[7em]">
+						<span className="m-auto inline-block w-[7em] rounded-[0.25em] bg-[#f9731629] px-[0.4em] py-[0.4em] text-center font-ubuntu text-[0.7rem] font-semibold text-primary md:text-[0.9rem]">
+							ML/DL
+						</span>
+					</div>
+					<div className="ml-[1em] flex w-[100%] flex-row flex-wrap justify-start gap-2 font-ubuntu text-[0.7rem] text-secondary md:text-[0.9rem]">
+						<span className="inline-block rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Numpy
+						</span>
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Pandas
+						</span>
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Matplotlib/Seaborn
+						</span>
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Scikit-learn
+						</span>
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							PyTorch
+						</span>
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Optuna
+						</span>
+					</div>
 				</div>
-			</div>
-			<div className="flex flex-row justify-start pl-[3em] pt-[0.5em]">
-				<div className="w-[8.35em]">
-					<span className="text-primary bg-[#f9731629] font-ubuntu font-semibold text-[0.9rem] m-auto ml-[1em] px-[0.4em] py-[0.4em] text-center rounded-[0.25em]">
-						ML/DL
-					</span>
-					<span className="text-white mx-[0.25em]">-</span>&nbsp;
+				<div className="flex flex-row justify-start pt-[0.5em]">
+					<div className="w-[7em]">
+						<span className="m-auto inline-block w-[7em] rounded-[0.25em] bg-[#f9731629] px-[0.4em] py-[0.4em] text-center font-ubuntu text-[0.7rem] font-semibold text-primary md:text-[0.9rem]">
+							WEB
+						</span>
+					</div>
+					<div className="ml-[1em] flex w-[100%] flex-row flex-wrap justify-start gap-2 font-ubuntu text-[0.7rem] text-secondary md:text-[0.9rem]">
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							React
+						</span>
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Node
+						</span>
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Express
+						</span>
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Next JS
+						</span>
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Django
+						</span>
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Tailwind CSS
+						</span>
+					</div>
 				</div>
-				<div className="flex flex-row flex-wrap justify-start gap-2 ">
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Numpy
-					</span>
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Pandas
-					</span>
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Matplotlib/Seaborn
-					</span>
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Scikit-learn
-					</span>
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						PyTorch
-					</span>
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Optuna
-					</span>
+				<div className="flex flex-row justify-start pt-[0.5em]">
+					<div className="w-[7em]">
+						<span className="m-auto inline-block w-[7em] rounded-[0.25em] bg-[#f9731629] px-[0.4em] py-[0.4em] text-center font-ubuntu text-[0.7rem] font-semibold text-primary md:text-[0.9rem]">
+							DATABASE
+						</span>
+					</div>
+					<div className="ml-[1em] flex w-[100%] flex-row flex-wrap justify-start gap-2 font-ubuntu text-[0.7rem] text-secondary md:text-[0.9rem]">
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							MySQL
+						</span>
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Sequelize
+						</span>
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							MongoDB
+						</span>
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Mongoose
+						</span>
+					</div>
 				</div>
-			</div>
-			<div className="flex flex-row justify-start pl-[3em] pt-[0.5em]">
-				<div className="w-[7.5em]">
-					<span className="text-primary bg-[#f9731629] font-ubuntu font-semibold text-[0.9rem] m-auto ml-[1em] px-[0.4em] py-[0.4em] text-center rounded-[0.25em] inline-block">
-						WEB
-					</span>
-					<span className="text-white mx-[0.25em]">-</span>&nbsp;
+				<div className="flex flex-row justify-start pt-[0.5em]">
+					<div className="w-[7em]">
+						<span className="m-auto inline-block w-[7em] rounded-[0.25em] bg-[#f9731629] px-[0.4em] py-[0.4em] text-center font-ubuntu text-[0.7rem] font-semibold text-primary md:text-[0.9rem]">
+							TOOLS
+						</span>
+					</div>
+					<div className="ml-[1em] flex w-[100%] flex-row flex-wrap justify-start gap-2 font-ubuntu text-[0.7rem] text-secondary md:text-[0.9rem]">
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Git
+						</span>
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Github
+						</span>
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Github Actions
+						</span>
+					</div>
 				</div>
-				<div className="flex flex-row flex-wrap justify-center gap-x-2">
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						React
-					</span>
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Node
-					</span>
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Express
-					</span>
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Next JS
-					</span>
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Django
-					</span>
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Tailwind CSS
-					</span>
+				<div className="flex flex-row justify-start pt-[0.5em]">
+					<div className="w-[7em]">
+						<span className="m-auto inline-block w-[7em] rounded-[0.25em] bg-[#f9731629] px-[0.4em] py-[0.4em] text-center font-ubuntu text-[0.7rem] font-semibold text-primary md:text-[0.9rem]">
+							TESTING
+						</span>
+					</div>
+					<div className="ml-[1em] flex w-[100%] flex-row flex-wrap justify-start gap-2 font-ubuntu text-[0.7rem] text-secondary md:text-[0.9rem]">
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Cypress
+						</span>
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Postman
+						</span>
+					</div>
 				</div>
-			</div>
-			<div className="flex flex-row justify-start pl-[3em] pt-[0.5em]">
-				<div className="w-[7.5em]">
-					<span className="text-primary bg-[#f9731629] font-ubuntu font-semibold text-[0.9rem] m-auto ml-[1em] px-[0.4em] py-[0.4em] text-center rounded-[0.25em] inline-block">
-						DATABASE
-					</span>
-					<span className="text-white mx-[0.25em]">-</span>&nbsp;
-				</div>
-				<div className="flex flex-row flex-wrap justify-center gap-x-2">
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						MySQL
-					</span>
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Sequelize
-					</span>
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						MongoDB
-					</span>
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Mongoose
-					</span>
-				</div>
-			</div>
-			<div className="flex flex-row justify-start pl-[3em] pt-[0.5em]">
-				<div className="w-[7.5em]">
-					<span className="text-primary bg-[#f9731629] font-ubuntu font-semibold text-[0.9rem] m-auto ml-[1em] px-[0.4em] py-[0.4em] text-center rounded-[0.25em] inline-block">
-						TOOLS
-					</span>
-					<span className="text-white mx-[0.25em]">-</span>&nbsp;
-				</div>
-				<div className="flex flex-row flex-wrap justify-center gap-x-2">
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Git
-					</span>
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Github
-					</span>
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Github Actions
-					</span>
-				</div>
-			</div>
-			<div className="flex flex-row justify-start pl-[3em] pt-[0.5em]">
-				<div className="w-[7.5em]">
-					<span className="text-primary bg-[#f9731629] font-ubuntu font-semibold text-[0.9rem] m-auto ml-[1em] px-[0.4em] py-[0.4em] text-center rounded-[0.25em] inline-block">
-						TESTING
-					</span>
-					<span className="text-white mx-[0.25em]">-</span>&nbsp;
-				</div>
-				<div className="flex flex-row flex-wrap justify-center gap-x-2">
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Cypress
-					</span>
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Postman
-					</span>
-				</div>
-			</div>
-			<div className="flex flex-row justify-start pl-[3em] pt-[0.5em]">
-				<div className="w-[7.5em]">
-					<span className="text-primary bg-[#f9731629] font-ubuntu font-semibold text-[0.9rem] m-auto ml-[1em] px-[0.4em] py-[0.4em] text-center rounded-[0.25em] inline-block">
-						DEPLOYMENT
-					</span>
-					<span className="text-white mx-[0.25em]">-</span>&nbsp;
-				</div>
-				<div className="flex flex-row flex-wrap justify-center gap-x-2">
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Vercel
-					</span>
-					<span className="font-ubuntu text-[0.9em] text-secondary px-[0.4em] py-[0.4em] rounded-[0.25em] bg-[#2bbc8a29]">
-						Github Pages
-					</span>
+				<div className="flex flex-row justify-start pt-[0.5em]">
+					<div className="w-[7em]">
+						<span className="m-auto inline-block w-[7em] rounded-[0.25em] bg-[#f9731629] px-[0.4em] py-[0.4em] text-center font-ubuntu text-[0.7rem] font-semibold text-primary md:text-[0.9rem]">
+							DEPLOYMENT
+						</span>
+					</div>
+					<div className="ml-[1em] flex w-[100%] flex-row flex-wrap justify-start gap-2 font-ubuntu text-[0.7rem] text-secondary md:text-[0.9rem]">
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Vercel
+						</span>
+						<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.4em] py-[0.4em]">
+							Github Pages
+						</span>
+					</div>
 				</div>
 			</div>
 		</div>

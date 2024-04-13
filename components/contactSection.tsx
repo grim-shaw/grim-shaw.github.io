@@ -3,20 +3,20 @@ import React from "react"
 
 export default function ContactSection() {
 	return (
-		<div className="w-[50%] flex flex-col justify-center m-auto mt-[4em] mb-[8em]">
-			<p className="font-ubuntu text-primary m-auto my-[0.25em] text-[1.3rem] underline underline-offset-4">
+		<div className="m-auto mb-[8em] mt-[4em] flex w-[80%] flex-col justify-center md:w-[70%] lg:w-[50%]">
+			<p className="m-auto my-[0.25em] font-ubuntu text-[1.2rem] text-primary underline underline-offset-4 md:text-[1.3rem]">
 				Contact
 			</p>
-			<p className="text-center text-[0.85em] text-white font-oxygen leading-8">
+			<p className="text-center font-oxygen text-[0.75rem] leading-8 text-white sm:text-[0.85rem]">
 				You can reach out to me through{" "}
 				<Link href={"https://www.linkedin.com/in/usamaqureshi01/"}>
-					<span className="w-[2.5em] h-[2.5em] cursor-pointer">
+					<span className="h-[2.5em] w-[2.5em] cursor-pointer">
 						<svg
 							stroke="#71717a"
 							fill="#71717a"
 							strokeWidth="0"
 							viewBox="0 0 24 24"
-							className="flex-shrink-0 h-[1.75em] inline w-[1.75em] hover:stroke-white hover:fill-white transition-colors duration-300"
+							className="inline h-[1.75em] w-[1.75em] flex-shrink-0 transition-colors duration-300 hover:fill-white hover:stroke-white"
 							aria-hidden="true"
 							height="1.5em"
 							width="1.5em"
@@ -27,7 +27,7 @@ export default function ContactSection() {
 					</span>
 				</Link>{" "}
 				as well as on my mail address at&nbsp;
-				<span className="text-[#ff63c3] bg-[#ff63c329] px-[0.4em] py-[0.4em] rounded-[0.25em]">
+				<span className="rounded-[0.25em] bg-[#ff63c329] px-[0.4em] py-[0.4em] text-[#ff63c3]">
 					usama7.qureshi@gmail.com
 				</span>
 			</p>

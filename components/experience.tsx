@@ -26,7 +26,7 @@ function TabPanel(props: TabPanelProps) {
 			hidden={value !== index}
 			id={`vertical-tabpanel-${index}`}
 			aria-labelledby={`vertical-tab-${index}`}
-			className="font-oxygen text-[0.85rem] w-[100%]"
+			className="w-[75%] font-oxygen text-[0.7rem] sm:text-[0.75rem] md:text-[0.8rem] lg:text-[0.85rem]"
 			{...other}
 		>
 			{value === index && (
@@ -53,11 +53,11 @@ export default function Experience() {
 	}
 
 	return (
-		<div className="m-auto my-[2em] text-center bg-[#202023] flex flex-col justify-center align-middle w-[80%]">
-			<p className="font-ubuntu text-primary m-auto mt-[1em] text-[1.3rem] underline underline-offset-4">
+		<div className="m-auto my-[2em] flex w-[100%] flex-col justify-center text-wrap bg-[#202023] text-center align-middle min-[390px]:w-[90%] sm:w-[80%] md:w-[70%] min-[1024px]:w-[60%] min-[1440px]:w-[50%]">
+			<p className="m-auto mt-[1em] w-[100%] font-ubuntu text-[1.2rem] text-primary underline underline-offset-4 md:text-[1.3rem]">
 				Education & Experience
 			</p>
-			<div className="flex flex-col justify-center align-middle min-w-[38em] m-auto mt-[1em]">
+			<div className="m-auto mt-[1em] flex w-[100%] flex-col justify-center align-middle ">
 				<ThemeProvider theme={theme}>
 					<Box
 						sx={{
@@ -75,7 +75,8 @@ export default function Experience() {
 							aria-label="Work Experiences"
 							sx={{
 								borderRight: 1,
-								borderColor: "#F97316"
+								borderColor: "#F97316",
+								width: "25%"
 							}}
 							TabIndicatorProps={{
 								style: {
@@ -97,7 +98,17 @@ export default function Experience() {
 								{...a11yProps(0)}
 								sx={{
 									color: "white",
-									fontFamily: "Ubuntu Mono"
+									fontFamily: "Ubuntu Mono",
+									fontSize: "0.875rem",
+									width: "100%",
+									paddingLeft: "2px",
+									wordWrap: "break-word",
+									"@media (max-width: 600px)": {
+										fontSize: "0.8rem"
+									},
+									"@media (max-width: 450px)": {
+										fontSize: "0.7rem"
+									}
 								}}
 							/>
 							<Tab
@@ -105,7 +116,17 @@ export default function Experience() {
 								{...a11yProps(1)}
 								sx={{
 									color: "white",
-									fontFamily: "Ubuntu Mono"
+									fontFamily: "Ubuntu Mono",
+									fontSize: "0.875rem",
+									width: "100%",
+									paddingLeft: "2px",
+									wordWrap: "break-word",
+									"@media (max-width: 600px)": {
+										fontSize: "0.8rem"
+									},
+									"@media (max-width: 450px)": {
+										fontSize: "0.7rem"
+									}
 								}}
 							/>
 						</Tabs>
@@ -119,20 +140,20 @@ export default function Experience() {
 							<p className="w-[38em] text-left"></p>
 						</TabPanel> */}
 						<TabPanel value={value} index={0}>
-							<div className="w-[41em] text-left mb-[1em] text-primary font-semibold">
+							<div className="mb-[1em] w-[100%] text-left font-semibold leading-6 text-primary">
 								Full Stack Intern @ ThinkSoft -{" "}
-								<span className="font-ubuntu text-[1em] text-secondary px-[0.5em] py-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+								<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[1em] text-secondary">
 									March, 2023 - July, 2023
 								</span>
 							</div>
-							<div className="w-[41em] break-words text-wrap text-left">
+							<div className="w-[100%] text-wrap break-words text-left">
 								Worked on a cutting-edge web development tool
 								called WebbsAI that combines drag-and-drop
 								functionality with Generative AI assistance to
 								simplify website creation process.
 							</div>
 							<br />
-							<div className="w-[41em] break-words text-wrap text-left">
+							<div className="w-[100%] text-wrap break-words text-left">
 								<li>
 									<span>
 										Implemented secure and efficient API
@@ -168,26 +189,26 @@ export default function Experience() {
 										Next.js, Tailwind CSS, and TypeScript.
 									</span>
 								</li>
-								<div className="w-[41em] text-left mt-[1em] text-primary">
+								<div className="mt-[1em] w-[100%] text-left text-primary">
 									Tech Stack
 									<br />
-									<p className="w-[100%] mt-[1em] flex flex-row flex-wrap">
-										<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+									<p className="mt-[1em] flex w-[100%] flex-row flex-wrap">
+										<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
 											TypeScript
 										</span>
-										<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+										<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
 											Next JS
 										</span>
-										<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+										<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
 											Tailwind CSS
 										</span>
-										<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+										<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
 											MongoDB
 										</span>
-										<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+										<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
 											Mongoose
 										</span>
-										<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+										<span className="mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
 											Git/Github
 										</span>
 									</p>
@@ -195,14 +216,14 @@ export default function Experience() {
 							</div>
 						</TabPanel>
 						<TabPanel value={value} index={1}>
-							<div className="w-[41em] text-left mb-[1em] leading-6 text-primary font-semibold">
+							<div className="mb-[1em] w-[100%] text-left font-semibold leading-6 text-primary">
 								Bachelor in Computer Science @ National
 								University of Science & Technology (NUST) -{" "}
-								<span className="font-ubuntu text-[1em] text-secondary px-[0.5em] py-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+								<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[1em] text-secondary">
 									June, 2020 - June, 2024
 								</span>
 							</div>
-							<div className="w-[41em] text-left">
+							<div className="w-[100%] text-left">
 								Studied computer science from School of
 								Electrical Engineering and Computer Science
 								(SEECS) at NUST. <br />
@@ -217,30 +238,30 @@ export default function Experience() {
 								Diabetic Retinopathy Severity Grading using Deep
 								Learning&rdquo; <br />
 							</div>
-							<div className="w-[41em] text-left mt-[1em] text-primary">
+							<div className="mt-[1em] w-[100%] text-left text-primary">
 								Major Courses
 								<br />
-								<p className="w-[100%] mt-[1em] flex flex-row flex-wrap">
-									<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+								<p className="mt-[1em] flex w-[100%] flex-row flex-wrap">
+									<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
 										Data Structures & Algorithms
 									</span>
-									<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+									<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
 										Database Systems
 									</span>
-									<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+									<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
 										Operating System
 									</span>
-									<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+									<span className="mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
 										Theory of Automata
 									</span>
-									<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+									<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
 										Computer Architecture & Assembly
 										Language
 									</span>
-									<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+									<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
 										Artificial Intelligence
 									</span>
-									<span className="font-ubuntu text-[0.9em] text-secondary px-[0.5em] py-[0.5em] mr-[0.4em] mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
+									<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
 										Deep Learning
 									</span>
 								</p>

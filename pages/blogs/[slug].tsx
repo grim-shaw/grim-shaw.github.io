@@ -1,11 +1,11 @@
-import React from "react"
+import Link from "next/link"
+import Head from "next/head"
 import { createClient } from "contentful"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types"
 import { CopyBlock, obsidian } from "react-code-blocks"
-import Link from "next/link"
-import Head from "next/head"
 import { motion } from "framer-motion"
+import { Calendar, Clock, LinkIcon } from "@/public/icons"
 
 const variants = {
 	hidden: { opacity: 0, x: 0, y: 20 },
@@ -93,27 +93,12 @@ const customMarkdownOptions = (content: any) => ({
 					className="cursor-pointer text-secondary hover:underline"
 				>
 					{children}
-					<svg
-						stroke="#2bbc8a"
-						fill="#2bbc8a"
-						strokeWidth="0"
-						viewBox="0 0 24 24"
-						className="ml-1 inline"
-						aria-hidden="true"
-						height="1.25em"
-						width="1.25em"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"></path>
-						<path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"></path>
-					</svg>
+					<LinkIcon />
 				</Link>
 			)
 		},
 		[BLOCKS.PARAGRAPH]: (node: any, children: any) => {
-			if (
-				find(node.content[0].marks, (mark: any) => mark.type === "code")
-			) {
+			if (find(node.content[0].marks, (mark: any) => mark.type === "code")) {
 				return (
 					<div className="my-[1em] bg-[#282c34] p-[2px]">
 						<CopyBlock
@@ -158,29 +143,11 @@ export default function Blog({ blog }: any) {
 			</Head>
 			<div className="mx-auto mt-[3em] flex w-[90%] flex-col border-t-[1px] border-[#413f3f] pr-[1em] pt-[2em] sm:ml-[4em] sm:w-[80%]">
 				<div className="mb-[1em] mt-[0.5em] flex flex-row justify-items-start align-middle text-[0.85rem] font-normal text-[#a1a1aa] lg:text-[0.95rem]">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						className="my-auto inline-block h-6 w-[1.375rem] scale-75 fill-[#a1a1aa]"
-						aria-hidden="true"
-					>
-						<path d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"></path>
-						<path d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"></path>
-					</svg>
+					<Calendar color="#a1a1aa" />
 					<p className="my-auto ml-[0.25em]">
 						{getFormatedTime(publishedTime)}
 					</p>
-					<svg
-						stroke="#a1a1aa"
-						fill="#a1a1aa"
-						strokeWidth="0"
-						viewBox="0 0 24 24"
-						height="1.2em"
-						width="1.2em"
-						xmlns="http://www.w3.org/2000/svg"
-						className="my-auto ml-[3em] scale-110"
-					>
-						<path d="M12.25 2c-5.514 0-10 4.486-10 10s4.486 10 10 10 10-4.486 10-10-4.486-10-10-10zM18 13h-6.75V6h2v5H18v2z"></path>
-					</svg>
+					<Clock color="#a1a1aa" className="ml-[3em]" />
 					<p className="my-auto ml-[0.5em]">{readingTime} min</p>
 				</div>
 				<p className="mb-[1em] font-ubuntu text-[1.3rem] text-primary lg:text-[1.6em]">

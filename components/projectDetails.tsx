@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import React from "react"
 import Head from "next/head"
 import { motion } from "framer-motion"
 
@@ -13,6 +12,7 @@ const variants = {
 export default function ProjectDetails({ project }: any) {
 	const { title, projectUrl, githubUrl, description, year, images, stack } =
 		project
+
 	return (
 		<motion.div
 			initial={"hidden"}

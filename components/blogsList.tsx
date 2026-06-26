@@ -1,9 +1,8 @@
-import React from "react"
-import SingleBlog from "./singleBlog"
+import { SingleBlog } from "@/components"
 
 export default function Blogs({ blogs }: any) {
 	return (
-		<div className="w-[100%] flex flex-col justify-start align-middle m-auto">
+		<div className="m-auto flex w-[100%] flex-col justify-start align-middle">
 			{blogs.map((blog: any) => (
 				<SingleBlog key={blog.sys.id} blog={blog} />
 			))}

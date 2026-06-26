@@ -1,0 +1,29 @@
+{
+	"LANGUAGES": ["Python", "JavaScript", "TypeScript"],
+	"WEB": [
+		"Django",
+		"DRF",
+		"Redis",
+		"Celery",
+		"Docker",
+		"AWS",
+		"Selenium",
+		"React",
+		"SCSS",
+		"Tailwind CSS",
+		"Node/Express",
+		"NextJS"
+	],
+	"DATABASE": ["POSTGRESQL", "MongoDB"],
+	"ML/DL": [
+		"Numpy",
+		"Pandas",
+		"Matplotlib",
+		"Scikit-learn",
+		"PyTorch",
+		"Optuna"
+	],
+	"TOOLS": ["Git", "Github", "Github Actions"],
+	"TESTING": ["Pytest", "Locust", "Postman", "Cypress"],
+	"DEPLOYMENT": ["Vercel", "Github Pages"]
+}

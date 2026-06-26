@@ -1,5 +1,4 @@
-import React from "react"
-import SingleProject from "./singleProject"
+import { SingleProject } from "@/components"
 
 export default function Catalogue({ projects }: any) {
 	return (

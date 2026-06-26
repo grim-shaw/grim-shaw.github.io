@@ -6,7 +6,7 @@ export default function Intro() {
 		<div className="m-auto flex w-[100%] flex-col justify-center align-middle">
 			<div className="m-auto mt-[6em] text-center">
 				<Image
-					src={"/me1.jpg"}
+					src={"/me.jpg"}
 					alt="profile"
 					width={150}
 					height={150}
@@ -16,7 +16,7 @@ export default function Intro() {
 					Usama Qureshi
 				</p>
 				<p className="m-auto mt-[0.75rem] rounded-[0.5rem] bg-[#ffffff14] p-[0.75rem] text-center font-ubuntu text-[0.8rem] text-white shadow-md shadow-black sm:text-[0.9rem] md:text-[1rem]">
-					Full Stack / Machine Learning Engineer
+					Full Stack Software Engineer
 				</p>
 			</div>
 			<div className="m-auto mt-[2em] w-[80%] text-center sm:w-[70%] md:w-[60%] lg:w-[50%]">

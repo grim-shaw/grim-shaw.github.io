@@ -26,7 +26,9 @@ export default function ProjectDetails({ project }: any) {
 				<title>Projects | {title}</title>
 			</Head>
 			<div className="ml-0 flex flex-row justify-start text-left font-ubuntu text-[1.1rem] font-semibold md:text-[1.2rem]">
-				<span className="underline underline-offset-4">Projects</span>
+				<Link href="/projects">
+					<span className="underline underline-offset-4">Projects</span>
+				</Link>
 				&nbsp;{">"}&nbsp;{title}
 				<span className="m-auto ml-[1em] inline-block rounded-[0.25em] bg-[#f9731629] px-[0.2em] py-[0.2em] text-center font-ubuntu text-[0.9rem] font-light text-primary">
 					{year}

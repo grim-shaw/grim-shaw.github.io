@@ -1,7 +1,7 @@
 import Head from "next/head"
 import { motion } from "framer-motion"
 import { createClient } from "contentful"
-import { BlogsList } from "@/components"
+import { BlogsList, MagmaBackground } from "@/components"
 import { Details } from "@/public/icons"
 
 const variants = {
@@ -38,19 +38,9 @@ export default function Blog({ blogs }: any) {
 				<title>Usama Qureshi | Blogs</title>
 			</Head>
 			<section className="m-auto flex h-[24em] w-[100%] flex-col justify-center pt-[4em] align-middle">
-				<div className="relative m-auto h-[20em] w-[100%] text-center">
-					<video
-						width="100%"
-						height="100%"
-						autoPlay
-						loop
-						muted
-						preload="none"
-						className="absolute inset-0 h-[20em] object-cover opacity-30"
-					>
-						<source src="/masthead.webm" type="video/mp4" />
-						Your browser does not support the video tag.
-					</video>
+				<div className="relative m-auto h-[20em] w-[100%] overflow-hidden text-center">
+					<MagmaBackground className="absolute inset-0 h-[20em] w-[100%]" />
+					<div className="absolute inset-0 h-[20em] border-y border-white/10 bg-black/10 backdrop-blur-sm" />
 				</div>
 				<div className="absolute m-auto w-[100%] text-center text-[#F97316] opacity-90">
 					<p className="font-jetbrain text-[2.25rem] font-medium">Blog</p>

@@ -1,0 +1,65 @@
+{
+	"Software Engineer": {
+		"name": "Software Engineer @ Arbisoft",
+		"period": "June, 2024 - Present",
+		"description": "Worked on AI notetaking app for video conferencing platforms and integration of LiteLLM AI gateway with different agent harnesses for AI assisted development within company.",
+		"points": [
+			"Developed multiple core modules including credits and billing module, Stripe integration, meeting settings, sharing and editing module, and user feedback collection module.",
+			"Built App-wide Search using PostgreSQL Full-Text Search with GIN indexing to optimize query performance.",
+			"Assisted in real-time Google Calendar ↔ PostgreSQL event syncing module.",
+			"Implemented alerting mechanism for failures using slack alerts and platform monitoring using better stack.",
+			"Engineered a containerized Selenium bot solution for Google Meet and Zoom to automate meeting participation, capture audio/video, and identify active speakers.",
+			"Authored subroutines using AWS SDK to streamline container lifecycle management on ECS Fargate instances.",
+			"Worked on desktop app built with ElectronJS and implemented real-time notifications using Firebase Cloud messaging.",
+			"Handled compatibility issues between agent harnesses such as ClaudeCode, OpenCode and LiteLLM AI gateway."
+		],
+		"skillsLabel": "Tech Stack",
+		"technology": [
+			"Django/DRF",
+			"PostgresQL",
+			"Celery",
+			"Redis",
+			"Docker",
+			"AWS",
+			"React",
+			"SCSS"
+		]
+	},
+	"Software Engineering Intern": {
+		"name": "Full Stack Intern @ ThinkSoft",
+		"period": "March, 2023 - July, 2023",
+		"description": "Worked on a cutting-edge web development tool called WebbsAI that combines drag-and-drop functionality with Generative AI assistance to simplify website creation process.",
+		"points": [
+			"Implemented secure and efficient API endpoints using the 'next-connect' package.",
+			"Added a comprehensive SEO and OpenGraph settings feature with SERP preview for websites created using WebbsAI.",
+			"Introduced a feature for wrapping selected text with typography components in web editor.",
+			"Leveraged TypeScript to ensure type safety and produce robust code, enhancing reliability and maintainability.",
+			"Developed WebbsAI product website using Next.js, Tailwind CSS, and TypeScript."
+		],
+		"skillsLabel": "Tech Stack",
+		"technology": [
+			"TypeScript",
+			"Next JS",
+			"Tailwind CSS",
+			"MongoDB",
+			"Mongoose",
+			"Git/Github"
+		]
+	},
+	"Computer Science Undergrad": {
+		"name": "Bachelor in Computer Science @ National University of Science & Technology (NUST)",
+		"period": "June, 2020 - June, 2024",
+		"description": "Studied computer science from School of Electrical Engineering and Computer Science (SEECS) at NUST.\nGraduated with CGPA of 3.82/4.00. Received GPA-Based Academic Scholarship in 7 out of 8 semsters.\nWorked as an Executive in IEEE SEECS in Publication chapter for duration of 1 year.\nFinal Year Project was “Explainable Diabetic Retinopathy Severity Grading using Deep Learning”",
+		"points": [],
+		"skillsLabel": "Major Courses",
+		"technology": [
+			"Data Structures & Algorithms",
+			"Database Systems",
+			"Operating System",
+			"Theory of Automata",
+			"Computer Architecture & Assembly Language",
+			"Artificial Intelligence",
+			"Deep Learning"
+		]
+	}
+}

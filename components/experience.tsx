@@ -5,10 +5,21 @@ import { createTheme, ThemeProvider } from "@mui/material/styles"
 import Fade from "@mui/material/Fade"
 import Box from "@mui/material/Box"
 
+import experienceData from "@/data/experience.json"
+
 interface TabPanelProps {
 	children?: React.ReactNode
 	index: number
 	value: number
+}
+
+interface ExperienceEntry {
+	name: string
+	period: string
+	description: string
+	points: string[]
+	skillsLabel: string
+	technology: string[]
 }
 
 const theme = createTheme({
@@ -16,6 +27,10 @@ const theme = createTheme({
 		primary: { main: "#F97316" }
 	}
 })
+
+const experiences = Object.entries(
+	experienceData as Record<string, ExperienceEntry>
+)
 
 function TabPanel(props: TabPanelProps) {
 	const { children, value, index, ...other } = props
@@ -85,188 +100,76 @@ export default function Experience() {
 								}
 							}}
 						>
-							{/* <Tab
-								label="Software Engineer"
-								{...a11yProps(0)}
-								sx={{
-									color: "white",
-									fontFamily: "Ubuntu Mono"
-								}}
-							/> */}
-							<Tab
-								label="Software Engineering Intern"
-								{...a11yProps(0)}
-								sx={{
-									color: "white",
-									fontFamily: "Ubuntu Mono",
-									fontSize: "0.875rem",
-									width: "100%",
-									paddingLeft: "2px",
-									wordWrap: "break-word",
-									"@media (max-width: 600px)": {
-										fontSize: "0.8rem"
-									},
-									"@media (max-width: 450px)": {
-										fontSize: "0.7rem"
-									}
-								}}
-							/>
-							<Tab
-								label="Computer Science Undergrad"
-								{...a11yProps(1)}
-								sx={{
-									color: "white",
-									fontFamily: "Ubuntu Mono",
-									fontSize: "0.875rem",
-									width: "100%",
-									paddingLeft: "2px",
-									wordWrap: "break-word",
-									"@media (max-width: 600px)": {
-										fontSize: "0.8rem"
-									},
-									"@media (max-width: 450px)": {
-										fontSize: "0.7rem"
-									}
-								}}
-							/>
+							{experiences.map(([label], index) => (
+								<Tab
+									key={label}
+									label={label}
+									{...a11yProps(index)}
+									sx={{
+										color: "white",
+										fontFamily: "Ubuntu Mono",
+										fontSize: "0.875rem",
+										width: "100%",
+										paddingLeft: "2px",
+										wordWrap: "break-word",
+										"@media (max-width: 600px)": {
+											fontSize: "0.8rem"
+										},
+										"@media (max-width: 450px)": {
+											fontSize: "0.7rem"
+										}
+									}}
+								/>
+							))}
 						</Tabs>
-						{/* <TabPanel value={value} index={0}>
-							<p className="w-[38em] text-left mb-[1em] text-primary font-semibold">
-								Software Engineer @ Arbisoft -{" "}
-								<span className="font-ubuntu text-[1em] text-secondary px-[0.5em] py-[0.5em] rounded-[0.25em] bg-[#2bbc8a29]">
-									June, 2024 -
-								</span>
-							</p>
-							<p className="w-[38em] text-left"></p>
-						</TabPanel> */}
-						<TabPanel value={value} index={0}>
-							<div className="mb-[1em] w-[100%] text-left font-semibold leading-6 text-primary">
-								Full Stack Intern @ ThinkSoft -{" "}
-								<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[1em] text-secondary">
-									March, 2023 - July, 2023
-								</span>
-							</div>
-							<div className="w-[100%] text-wrap break-words text-left">
-								Worked on a cutting-edge web development tool
-								called WebbsAI that combines drag-and-drop
-								functionality with Generative AI assistance to
-								simplify website creation process.
-							</div>
-							<br />
-							<div className="w-[100%] text-wrap break-words text-left">
-								<li>
-									<span>
-										Implemented secure and efficient API
-										endpoints using the
-										&apos;next-connect&apos; package.
+						{experiences.map(([label, experience], index) => (
+							<TabPanel key={label} value={value} index={index}>
+								<div className="mb-[1em] w-[100%] text-left font-semibold leading-6 text-primary">
+									{experience.name} -{" "}
+									<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[1em] text-secondary">
+										{experience.period}
 									</span>
-								</li>
-								<li>
-									<span>
-										Added a comprehensive SEO and OpenGraph
-										settings feature with SERP preview for
-										websites created using WebbsAI.
-									</span>
-								</li>
-								<li>
-									<span>
-										Introduced a feature for wrapping
-										selected text with typography components
-										in web editor.
-									</span>
-								</li>
-								<li>
-									<span>
-										Leveraged TypeScript to ensure type
-										safety and produce robust code,
-										enhancing reliability and
-										maintainability.
-									</span>
-								</li>
-								<li>
-									<span>
-										Developed WebbsAI product website using
-										Next.js, Tailwind CSS, and TypeScript.
-									</span>
-								</li>
-								<div className="mt-[1em] w-[100%] text-left text-primary">
-									Tech Stack
-									<br />
-									<p className="mt-[1em] flex w-[100%] flex-row flex-wrap">
-										<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
-											TypeScript
-										</span>
-										<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
-											Next JS
-										</span>
-										<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
-											Tailwind CSS
-										</span>
-										<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
-											MongoDB
-										</span>
-										<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
-											Mongoose
-										</span>
-										<span className="mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
-											Git/Github
-										</span>
-									</p>
 								</div>
-							</div>
-						</TabPanel>
-						<TabPanel value={value} index={1}>
-							<div className="mb-[1em] w-[100%] text-left font-semibold leading-6 text-primary">
-								Bachelor in Computer Science @ National
-								University of Science & Technology (NUST) -{" "}
-								<span className="rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[1em] text-secondary">
-									June, 2020 - June, 2024
-								</span>
-							</div>
-							<div className="w-[100%] text-left">
-								Studied computer science from School of
-								Electrical Engineering and Computer Science
-								(SEECS) at NUST. <br />
-								Graduated with CGPA of 3.82/4.00. Received
-								GPA-Based Academic Scholarship in 7 out of 8
-								semsters.
-								<br />
-								Worked as an Executive in IEEE SEECS in
-								Publication chapter for duration of 1 year.{" "}
-								<br />
-								Final Year Project was &ldquo;Explainable
-								Diabetic Retinopathy Severity Grading using Deep
-								Learning&rdquo; <br />
-							</div>
-							<div className="mt-[1em] w-[100%] text-left text-primary">
-								Major Courses
-								<br />
-								<p className="mt-[1em] flex w-[100%] flex-row flex-wrap">
-									<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
-										Data Structures & Algorithms
-									</span>
-									<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
-										Database Systems
-									</span>
-									<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
-										Operating System
-									</span>
-									<span className="mb-[0.5em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
-										Theory of Automata
-									</span>
-									<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
-										Computer Architecture & Assembly
-										Language
-									</span>
-									<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
-										Artificial Intelligence
-									</span>
-									<span className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary">
-										Deep Learning
-									</span>
-								</p>
-							</div>
-						</TabPanel>
+								<div className="mb-4 w-[100%] text-wrap break-words text-left">
+									{experience.description
+										.split("\n")
+										.map((line, lineIndex) => (
+											<React.Fragment key={lineIndex}>
+												{line}
+												<br />
+											</React.Fragment>
+										))}
+								</div>
+								<div className="w-[100%] text-wrap break-words text-left">
+									{experience.points.map(
+										(point, pointIndex) => (
+											<li
+												key={pointIndex}
+												className="ml-3"
+											>
+												<span>{point}</span>
+											</li>
+										)
+									)}
+									<div className="mt-[1em] w-[100%] text-left text-primary">
+										{experience.skillsLabel}
+										<br />
+										<p className="mt-[1em] flex w-[100%] flex-row flex-wrap">
+											{experience.technology.map(
+												(tech, techIndex) => (
+													<span
+														key={techIndex}
+														className="mb-[0.5em] mr-[0.4em] rounded-[0.25em] bg-[#2bbc8a29] px-[0.5em] py-[0.5em] font-ubuntu text-[0.9em] text-secondary"
+													>
+														{tech}
+													</span>
+												)
+											)}
+										</p>
+									</div>
+								</div>
+							</TabPanel>
+						))}
 					</Box>
 				</ThemeProvider>
 			</div>

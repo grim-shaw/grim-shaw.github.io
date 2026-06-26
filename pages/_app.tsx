@@ -3,8 +3,7 @@ import type { AppProps } from "next/app"
 import Head from "next/head"
 import { useRouter } from "next/router"
 import { motion, AnimatePresence } from "framer-motion"
-import Navbar from "@/components/navbar"
-import Footer from "@/components/footer"
+import { Navbar, Footer } from "@/components"
 
 export default function App({ Component, pageProps }: AppProps) {
 	const router = useRouter()
@@ -27,15 +26,11 @@ export default function App({ Component, pageProps }: AppProps) {
 					variants={{
 						initialState: {
 							opacity: 0
-							// clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
 						},
 						animateState: {
 							opacity: 1
-							// clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
 						},
-						exitState: {
-							// clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)"
-						}
+						exitState: {}
 					}}
 					className="base-page-size"
 				>

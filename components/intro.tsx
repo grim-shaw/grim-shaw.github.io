@@ -1,5 +1,4 @@
 import Image from "next/image"
-import React from "react"
 
 export default function Intro() {
 	return (
@@ -24,13 +23,12 @@ export default function Intro() {
 					Bio
 				</p>
 				<p className="m-auto mt-[1em] w-[100%] break-words text-justify font-oxygen text-[0.775rem] text-white md:text-[0.85rem] min-[1024px]:w-[85%] min-[1440px]:w-[80%]">
-					&nbsp;&nbsp; I am a full-stack developer with deep interest
-					in machine learning. I have passion for designing and
-					developing software to solve real world problems. In my
-					spare time, I like to figure out mathematical background of
-					different deep learning architectures and gain insight into
-					their ability to learn. I have bachelor in computer science
-					from National University of Science & Technology.
+					&nbsp;&nbsp; I am a full-stack developer with deep interest in machine
+					learning. I have passion for designing and developing software to
+					solve real world problems. In my spare time, I like to figure out
+					mathematical background of different deep learning architectures and
+					gain insight into their ability to learn. I have bachelor in computer
+					science from National University of Science & Technology.
 				</p>
 			</div>
 		</div>

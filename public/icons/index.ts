@@ -1,0 +1,5 @@
+export { default as IconLinkedin } from "./IconLinkedin"
+export { default as Calendar } from "./Calendar"
+export { default as Clock } from "./Clock"
+export { default as Details } from "./Details"
+export { default as LinkIcon } from "./Link"

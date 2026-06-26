@@ -1,10 +1,7 @@
 import Head from "next/head"
 import { motion } from "framer-motion"
 
-import Intro from "@/components/intro"
-import Experience from "@/components/experience"
-import Technologies from "@/components/technologies"
-import ContactSection from "@/components/contactSection"
+import { Intro, Experience, Technologies, ContactSection } from "@/components"
 
 const variants = {
 	hidden: { opacity: 0, x: 0, y: 20 },

@@ -1,8 +1,7 @@
-import React from "react"
 import fs from "fs"
 import path from "path"
 
-import ProjectDetails from "@/components/projectDetails"
+import { ProjectDetails } from "@/components"
 
 export const getStaticPaths = async () => {
 	let fileData = []
@@ -28,9 +27,7 @@ export async function getStaticProps({ params }: any) {
 	const jsonData = fs.readFileSync(filePath, "utf-8")
 	fileData = JSON.parse(jsonData)
 
-	const item = fileData.filter(
-		(project: any) => project.title === params.slug
-	)
+	const item = fileData.filter((project: any) => project.title === params.slug)
 
 	return {
 		props: { project: item[0] }

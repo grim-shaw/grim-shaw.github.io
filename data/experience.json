@@ -15,14 +15,20 @@
 		],
 		"skillsLabel": "Tech Stack",
 		"technology": [
+			"Python",
 			"Django/DRF",
 			"PostgresQL",
 			"Celery",
 			"Redis",
 			"Docker",
 			"AWS",
+			"JavaScript",
 			"React",
-			"SCSS"
+			"SCSS",
+			"Selenium",
+			"Git/Github",
+			"ElectronJS",
+			"LiteLLM"
 		]
 	},
 	"Software Engineering Intern": {

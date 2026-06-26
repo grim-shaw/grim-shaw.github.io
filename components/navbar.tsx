@@ -54,7 +54,7 @@ export default function Navbar() {
 					<p className="m-0 mx-auto my-auto ml-1">Blog</p>
 				</div>
 			</Link>
-			<Link href={"https://github.com/Grimmer107"}>
+			<Link href={"https://github.com/grim-shaw"}>
 				<div className="m-0 mx-[1em] my-auto hidden h-[2.5em] cursor-pointer flex-row justify-center rounded-[10px] border-[1px] border-[#413f3f] px-[1em] align-middle text-[#bbb] hover:border-[#c0bbbb] min-[520px]:flex">
 					<Image
 						width={20}
@@ -91,7 +91,7 @@ export default function Navbar() {
 							Blogs
 						</div>
 					</Link>
-					<Link href={"https://github.com/Grimmer107"}>
+					<Link href={"https://github.com/grim-shaw"}>
 						<div className="m-auto w-[100%] rounded-b-[0.5em] px-[2em] py-[0.75em] hover:bg-[#18181B]">
 							GitHub
 						</div>

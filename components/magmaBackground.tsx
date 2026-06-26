@@ -1,6 +1,18 @@
+import { useEffect, useRef } from "react"
+
 export default function MagmaBackground({ className }: { className?: string }) {
+	const svgRef = useRef<SVGSVGElement>(null)
+
+	useEffect(() => {
+		const animations = svgRef.current?.querySelectorAll<SVGAnimationElement>(
+			"animate, animateTransform"
+		)
+		animations?.forEach(animation => animation.beginElement?.())
+	}, [])
+
 	return (
 		<svg
+			ref={svgRef}
 			className={className}
 			viewBox="0 0 800 400"
 			preserveAspectRatio="xMidYMid slice"

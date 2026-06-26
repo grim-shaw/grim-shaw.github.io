@@ -2,11 +2,11 @@ import technologiesData from "@/data/technologies.json"
 
 export default function Technologies() {
 	return (
-		<div className="m-auto my-[2em] flex w-[95%] flex-col align-middle text-[1rem] min-[768px]:w-[85%] min-[1025px]:w-[75%] min-[1441px]:w-[50%]">
+		<div className="m-auto my-[2em] flex w-[95%] flex-col pl-[1em] align-middle text-[1rem] min-[768px]:w-[85%] min-[1025px]:w-[75%] min-[1441px]:w-[50%]">
 			<div className="m-auto my-[1em] text-center font-ubuntu text-[1.2rem] text-primary underline underline-offset-4 md:text-[1.3rem]">
 				Tools & Technologies
 			</div>
-			<div className="mx-auto flex w-[95%] flex-col min-[425px]:w-[80%] min-[768px]:w-[80%] min-[1024px]:w-[72.5%] min-[1440px]:w-[60%]">
+			<div className="mx-auto flex w-fit max-w-[95%] flex-col pl-[2em] min-[425px]:max-w-[80%] min-[768px]:max-w-[80%] min-[1024px]:max-w-[72.5%] min-[1440px]:max-w-[60%]">
 				{Object.entries(technologiesData).map(([category, stack]) => (
 					<div
 						key={category}

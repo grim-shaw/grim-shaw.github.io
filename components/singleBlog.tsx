@@ -56,12 +56,12 @@ export default function SingleBlog({ blog }: any) {
 				</div>
 				<div className="mt-[1em] flex justify-items-start align-middle text-[0.6rem] font-normal text-white min-[390px]:text-[0.7rem] md:text-[0.8rem]">
 					<Calendar />
-					<p className="my-auto">
+					<p className="my-auto pt-[2px]">
 						&nbsp;{getFormatedTime(publishedTime)}
 						<span className="mx-[1em] scale-110">|</span>
 					</p>
 					<Clock />
-					<p className="my-auto ml-[12px]">{readingTime} min</p>
+					<p className="my-auto ml-[12px] pt-[2px]">{readingTime} min</p>
 				</div>
 			</div>
 		</div>

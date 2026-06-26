@@ -1,25 +1,55 @@
 import { useEffect, useRef } from "react"
 
 export default function MagmaBackground({ className }: { className?: string }) {
-	const svgRef = useRef<SVGSVGElement>(null)
+	const turbulenceRef = useRef<SVGFETurbulenceElement>(null)
+	const displacementRef = useRef<SVGFEDisplacementMapElement>(null)
+	const layerRef = useRef<SVGGElement>(null)
 
 	useEffect(() => {
-		const animations = svgRef.current?.querySelectorAll<SVGAnimationElement>(
-			"animate, animateTransform"
-		)
-		animations?.forEach(animation => animation.beginElement?.())
+		const turbulence = turbulenceRef.current
+		const displacement = displacementRef.current
+		const layer = layerRef.current
+		if (!turbulence || !displacement || !layer) return
+
+		const reduceMotion = window.matchMedia(
+			"(prefers-reduced-motion: reduce)"
+		).matches
+		if (reduceMotion) return
+
+		let frame = 0
+		const start = performance.now()
+		const wave = (t: number, period: number, phase = 0) =>
+			Math.sin((t / period) * Math.PI * 2 + phase)
+
+		const tick = (now: number) => {
+			const t = (now - start) / 1000
+
+			const fx = 0.011 + 0.005 * wave(t, 95)
+			const fy = 0.013 + 0.005 * wave(t, 70, 1.3)
+			turbulence.setAttribute("baseFrequency", `${fx} ${fy}`)
+
+			displacement.setAttribute("scale", `${175 + 45 * wave(t, 71)}`)
+
+			const tx = 45 * wave(t, 150) + 15 * wave(t, 53, 2.1)
+			const ty = 35 * wave(t, 97, 0.7) + 12 * wave(t, 41, 4.2)
+			layer.setAttribute("transform", `translate(${tx} ${ty})`)
+
+			frame = requestAnimationFrame(tick)
+		}
+
+		frame = requestAnimationFrame(tick)
+		return () => cancelAnimationFrame(frame)
 	}, [])
 
 	return (
 		<svg
-			ref={svgRef}
 			className={className}
 			viewBox="0 0 800 400"
 			preserveAspectRatio="xMidYMid slice"
 			xmlns="http://www.w3.org/2000/svg"
 		>
 			<defs>
-				{/* Banded magma palette — alternating deep black and glowing lava
+				{/* Banded magma palette — alternating deep blue and glowing lava
 				    so that warping the gradient produces silky, flowing ribbons. */}
 				<linearGradient id="magmaGradient" x1="0" y1="0" x2="0.7" y2="1">
 					<stop offset="0%" stopColor="#1e1b4b" />
@@ -38,47 +68,21 @@ export default function MagmaBackground({ className }: { className?: string }) {
 				    bands into continuously flowing lava wisps. */}
 				<filter id="magmaFlow" x="-20%" y="-20%" width="140%" height="140%">
 					<feTurbulence
+						ref={turbulenceRef}
 						type="fractalNoise"
-						baseFrequency="0.009 0.014"
+						baseFrequency="0.011 0.013"
 						numOctaves="4"
 						seed="7"
 						result="noise"
-					>
-						<animate
-							attributeName="baseFrequency"
-							dur="95s"
-							values="0.009 0.014; 0.016 0.008; 0.007 0.018; 0.013 0.010; 0.018 0.015; 0.008 0.012; 0.009 0.014"
-							repeatCount="indefinite"
-							calcMode="spline"
-							keyTimes="0; 0.17; 0.31; 0.48; 0.66; 0.83; 1"
-							keySplines="0.45 0 0.55 1; 0.45 0 0.55 1; 0.45 0 0.55 1; 0.45 0 0.55 1; 0.45 0 0.55 1; 0.45 0 0.55 1"
-						/>
-						<animate
-							attributeName="seed"
-							dur="173s"
-							values="7; 9; 12; 8; 7"
-							repeatCount="indefinite"
-							calcMode="discrete"
-							keyTimes="0; 0.28; 0.55; 0.78; 1"
-						/>
-					</feTurbulence>
+					/>
 					<feDisplacementMap
+						ref={displacementRef}
 						in="SourceGraphic"
 						in2="noise"
-						scale="170"
+						scale="175"
 						xChannelSelector="R"
 						yChannelSelector="G"
-					>
-						<animate
-							attributeName="scale"
-							dur="71s"
-							values="170; 215; 140; 195; 160; 170"
-							repeatCount="indefinite"
-							calcMode="spline"
-							keyTimes="0; 0.22; 0.44; 0.63; 0.81; 1"
-							keySplines="0.45 0 0.55 1; 0.45 0 0.55 1; 0.45 0 0.55 1; 0.45 0 0.55 1; 0.45 0 0.55 1"
-						/>
-					</feDisplacementMap>
+					/>
 				</filter>
 			</defs>
 
@@ -86,17 +90,7 @@ export default function MagmaBackground({ className }: { className?: string }) {
 
 			{/* Drifting layer gives the ribbons a slow directional flow on top of
 			    the morphing turbulence. */}
-			<g>
-				<animateTransform
-					attributeName="transform"
-					type="translate"
-					values="0 0; -55 0; -55 -38; 0 -38; 42 28; 42 -8; -20 34; 0 0"
-					dur="150s"
-					repeatCount="indefinite"
-					calcMode="spline"
-					keyTimes="0; 0.15; 0.28; 0.42; 0.57; 0.71; 0.86; 1"
-					keySplines="0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1"
-				/>
+			<g ref={layerRef}>
 				<rect
 					x="-80"
 					y="-80"

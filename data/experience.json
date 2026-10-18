@@ -1,7 +1,22 @@
 {
+	"Computer Science Master": {
+		"name": "Master in Computer Science @ Technische Universitat Dresden (TUD)",
+		"period": "October, 2026 - Present",
+		"description": "Pursuing a master's degree in computer science to specialize in AI, inference optimization and distributed training.",
+		"points": [],
+		"skillsLabel": "Major Courses",
+		"technology": [
+			"Large Language Models",
+			"Highly Parallel programming on GPUs",
+			"Machine Learning",
+			"High Performance Computing",
+			"Compiler Construction",
+			"Deep Learning for Computer Vision"
+		]
+	},
 	"Software Engineer": {
 		"name": "Software Engineer @ Arbisoft",
-		"period": "June, 2024 - Present",
+		"period": "June, 2024 - September, 2026",
 		"description": "Worked on AI notetaking app for video conferencing platforms and integration of LiteLLM AI gateway with different agent harnesses for AI assisted development within company.",
 		"points": [
 			"Developed multiple core modules including credits and billing module, Stripe integration, meeting settings, sharing and editing module, and user feedback collection module.",
